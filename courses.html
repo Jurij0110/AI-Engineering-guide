@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A maintainable catalog of AI engineering courses, repositories, and progress." />
+    <title>Course Library</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/course-catalog.css" />
+  </head>
+  <body class="catalog-page">
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="AI Engineer Field Guide home">
+        <span class="brand-mark" aria-hidden="true">AI</span>
+        <span>Engineer Field Guide</span>
+      </a>
+      <nav class="catalog-nav" aria-label="Page navigation">
+        <a href="index.html">Roadmap</a>
+        <a class="active" href="courses.html" aria-current="page">Course library</a>
+      </nav>
+    </header>
+
+    <main class="catalog-main">
+      <header class="catalog-hero">
+        <span class="eyebrow">Learning repository · focused study</span>
+        <h1>Course Library</h1>
+        <p>Structured course repositories, source materials, and progress in one place.</p>
+      </header>
+
+      <section class="catalog-summary" aria-label="Library statistics">
+        <div><strong id="library-count">0</strong><span>libraries</span></div>
+        <div><strong id="track-count">0</strong><span>courses</span></div>
+        <div><strong id="completed-count">0</strong><span>materials complete</span></div>
+      </section>
+
+      <section id="course-libraries" class="course-libraries" aria-label="Available course libraries"></section>
+    </main>
+
+    <script src="assets/data/course-libraries.js"></script>
+    <script src="assets/js/course-catalog/app.js"></script>
+  </body>
+</html>

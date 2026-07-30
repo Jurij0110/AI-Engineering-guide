@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A searchable course repository with labs, assignments, and progress tracking." />
+    <title>Course Library</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/course-library.css" />
+  </head>
+  <body class="library-page">
+    <header class="topbar library-topbar">
+      <a class="brand" href="courses.html" aria-label="Back to Course Library">
+        <span class="brand-mark" aria-hidden="true">AI</span>
+        <span>Course Library</span>
+      </a>
+      <nav class="library-nav" aria-label="Page navigation">
+        <a href="index.html">Roadmap</a>
+        <a href="courses.html">All courses</a>
+        <a id="library-nav-title" class="active" href="#" aria-current="page">Course</a>
+        <a id="repository-link" href="#" target="_blank" rel="noreferrer">Open repository</a>
+      </nav>
+    </header>
+
+    <main class="library-main">
+      <section class="library-hero">
+        <div>
+          <span id="library-eyebrow" class="eyebrow">Repository companion</span>
+          <h1 id="library-title">Course Library</h1>
+          <p id="library-description">Loading course details...</p>
+        </div>
+        <div class="source-panel">
+          <span>Source</span>
+          <strong id="source-repository">Loading...</strong>
+          <small id="source-status"><span class="status-pulse"></span>Loading live repository tree</small>
+        </div>
+      </section>
+
+      <aside class="integrity-note">
+        <strong id="integrity-title">Use this as reference material.</strong>
+        <p id="integrity-text">Complete graded work independently.</p>
+      </aside>
+
+      <section class="library-stats" aria-label="Repository statistics">
+        <div><strong id="course-count">0</strong><span>courses</span></div>
+        <div><strong id="module-count">—</strong><span>modules</span></div>
+        <div><strong id="lab-count">—</strong><span>labs & notebooks</span></div>
+        <div><strong id="project-count">—</strong><span>projects</span></div>
+        <div><strong id="file-count">—</strong><span>indexed files</span></div>
+      </section>
+
+      <section class="library-controls" aria-label="Repository filters">
+        <label class="library-search" for="library-search">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>
+          <input id="library-search" type="search" placeholder="Search courses, modules, labs, and projects" autocomplete="off" />
+        </label>
+        <div class="type-filters" id="type-filters" role="group" aria-label="Filter by material type">
+          <button class="active" type="button" data-type="all">All</button>
+          <button type="button" data-type="lab">Labs</button>
+          <button type="button" data-type="assignment">Assignments</button>
+          <button type="button" data-type="note">Notes</button>
+          <button type="button" data-type="resource">Resources</button>
+          <button type="button" data-type="code">Code</button>
+        </div>
+      </section>
+
+      <div class="library-layout">
+        <aside class="course-index" aria-label="Course index">
+          <span id="course-index-label" class="index-label">Course index</span>
+          <nav id="course-index"></nav>
+        </aside>
+        <section id="repository-content" class="repository-content" aria-live="polite">
+          <div class="loading-state"><span></span><strong>Indexing repository</strong><p>Reading the complete GitHub tree...</p></div>
+        </section>
+      </div>
+
+      <section id="library-empty" class="empty-state" hidden>
+        <strong>No materials found</strong>
+        <p>Try a different search or material type.</p>
+      </section>
+    </main>
+
+    <script src="assets/data/course-libraries.js"></script>
+    <script src="assets/js/course-library/app.js"></script>
+  </body>
+</html>

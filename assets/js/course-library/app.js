@@ -129,26 +129,17 @@ function renderCourseIndex() {
 function renderFile(file) {
   const checked = completedFiles.has(file.path);
   const isNotebook = file.filename.endsWith(".ipynb");
-  const isTextNote = file.filename.endsWith(".txt") || file.filename.endsWith(".md");
   const encodedPath = file.path.split("/").map(part => encodeURIComponent(part)).join("/");
-  
-  const colabUrl = isNotebook 
-    ? `https://colab.research.google.com/github/${repository}/blob/${branch}/${encodedPath}`
-    : `https://colab.research.google.com/#create=true`;
-
-  const notebookViewUrl = `notebook.html?file=${encodedPath}&title=${encodeURIComponent(file.name)}`;
+  const colabUrl = isNotebook ? `https://colab.research.google.com/github/${repository}/blob/${branch}/${encodedPath}` : "";
 
   return `<div class="material-row ${checked ? "is-complete" : ""}">
     <label class="library-check"><input type="checkbox" data-file-path="${file.path}" ${checked ? "checked" : ""}><span></span><span class="sr-only">Mark ${file.name} complete</span></label>
-    <a class="material-link" href="${notebookViewUrl}">
+    <a class="material-link" href="${githubPath(file.path)}" target="_blank" rel="noreferrer">
       <span class="material-kind ${file.type}">${file.label}</span>
       <span class="material-name"><strong>${file.name}</strong><small>${file.filename}</small></span>
       <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M14 5h5v5M19 5l-8 8"></path><path d="M19 13v6H5V5h6"></path></svg>
     </a>
-    <div class="notebook-actions">
-      <a class="colab-link" href="${colabUrl}" target="_blank" rel="noreferrer" title="${isNotebook ? 'Open executable Jupyter Notebook in Google Colab' : 'Create Python Notebook for this topic in Google Colab'}"><svg aria-hidden="true" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 2A10 10 0 1 0 22 12 10.011 10.011 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8.009 8.009 0 0 1-8 8z"/><path d="M9.5 16.5l7-4.5-7-4.5v9z"/></svg><span>${isNotebook ? 'Colab' : 'Create Colab'}</span></a>
-      <a class="gemini-notebook-link" href="https://notebook.google.com/" target="_blank" rel="noreferrer" title="Study this material in Google Gemini Notebook (notebook.google.com)"><svg aria-hidden="true" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg><span>notebook.google.com</span></a>
-    </div>
+    ${isNotebook ? `<a class="colab-link" href="${colabUrl}" target="_blank" rel="noreferrer" title="Open executable Jupyter Notebook in Google Colab"><svg aria-hidden="true" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 2A10 10 0 1 0 22 12 10.011 10.011 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8.009 8.009 0 0 1-8 8z"/><path d="M9.5 16.5l7-4.5-7-4.5v9z"/></svg><span>Colab</span></a>` : ""}
   </div>`;
 }
 

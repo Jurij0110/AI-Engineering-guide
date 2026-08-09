@@ -66,9 +66,13 @@
 .material-row:last-child { border-bottom: 0; }
 .material-row:hover { background: #f8f9f6; }
 .material-row.is-complete .material-name strong { color: var(--muted); text-decoration: line-through; }
+.notebook-actions { display: flex; align-items: center; gap: 6px; }
 .colab-link { display: inline-flex; align-items: center; gap: 5px; padding: 5px 9px; background: #fff7ed; border: 1px solid #fdba74; border-radius: 4px; color: #c2410c; font: 600 9px/1 "DM Mono", monospace; text-decoration: none; transition: all .15s ease; white-space: nowrap; }
 .colab-link:hover { background: #ffedd5; border-color: #f97316; color: #9a3412; }
 .colab-link svg { flex: 0 0 auto; }
+.gemini-notebook-link { display: inline-flex; align-items: center; gap: 5px; padding: 5px 9px; background: #f0fdf4; border: 1px solid #86efac; border-radius: 4px; color: #15803d; font: 600 9px/1 "DM Mono", monospace; text-decoration: none; transition: all .15s ease; white-space: nowrap; }
+.gemini-notebook-link:hover { background: #dcfce7; border-color: #4ade80; color: #166534; }
+.gemini-notebook-link svg { flex: 0 0 auto; }
 .material-link { display: grid; grid-template-columns: 105px minmax(0, 1fr) 17px; gap: 15px; align-items: center; min-width: 0; min-height: 58px; color: var(--ink); text-decoration: none; }
 .material-kind { justify-self: start; padding: 4px 6px; font: 8px "DM Mono", monospace; text-transform: uppercase; border: 1px solid var(--line); }
 .material-kind.lab { color: #176b86; background: #edf8fb; border-color: #a8ced8; }

@@ -62,11 +62,13 @@
 .repo-module-action { color: var(--muted); font: 8px "DM Mono", monospace; text-transform: uppercase; }
 .repo-module-action::after { content: "+"; margin-left: 8px; color: var(--ink); font-size: 13px; }
 .repo-module[open] .repo-module-action::after { content: "−"; }
-.material-list { border-top: 1px solid var(--line); background: white; }
-.material-row { display: grid; grid-template-columns: 32px minmax(0, 1fr); gap: 9px; align-items: center; min-height: 58px; padding: 0 20px; color: var(--ink); border-bottom: 1px solid #e8ebe7; }
+.material-row { display: grid; grid-template-columns: 32px minmax(0, 1fr) auto; gap: 12px; align-items: center; min-height: 58px; padding: 0 20px; color: var(--ink); border-bottom: 1px solid #e8ebe7; }
 .material-row:last-child { border-bottom: 0; }
 .material-row:hover { background: #f8f9f6; }
 .material-row.is-complete .material-name strong { color: var(--muted); text-decoration: line-through; }
+.colab-link { display: inline-flex; align-items: center; gap: 5px; padding: 5px 9px; background: #fff7ed; border: 1px solid #fdba74; border-radius: 4px; color: #c2410c; font: 600 9px/1 "DM Mono", monospace; text-decoration: none; transition: all .15s ease; white-space: nowrap; }
+.colab-link:hover { background: #ffedd5; border-color: #f97316; color: #9a3412; }
+.colab-link svg { flex: 0 0 auto; }
 .material-link { display: grid; grid-template-columns: 105px minmax(0, 1fr) 17px; gap: 15px; align-items: center; min-width: 0; min-height: 58px; color: var(--ink); text-decoration: none; }
 .material-kind { justify-self: start; padding: 4px 6px; font: 8px "DM Mono", monospace; text-transform: uppercase; border: 1px solid var(--line); }
 .material-kind.lab { color: #176b86; background: #edf8fb; border-color: #a8ced8; }

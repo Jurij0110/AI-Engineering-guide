@@ -136,9 +136,11 @@ function renderFile(file) {
     ? `https://colab.research.google.com/github/${repository}/blob/${branch}/${encodedPath}`
     : `https://colab.research.google.com/#create=true`;
 
+  const notebookViewUrl = `notebook.html?file=${encodedPath}&title=${encodeURIComponent(file.name)}`;
+
   return `<div class="material-row ${checked ? "is-complete" : ""}">
     <label class="library-check"><input type="checkbox" data-file-path="${file.path}" ${checked ? "checked" : ""}><span></span><span class="sr-only">Mark ${file.name} complete</span></label>
-    <a class="material-link" href="${githubPath(file.path)}" target="_blank" rel="noreferrer">
+    <a class="material-link" href="${notebookViewUrl}">
       <span class="material-kind ${file.type}">${file.label}</span>
       <span class="material-name"><strong>${file.name}</strong><small>${file.filename}</small></span>
       <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M14 5h5v5M19 5l-8 8"></path><path d="M19 13v6H5V5h6"></path></svg>

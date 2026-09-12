@@ -57,9 +57,11 @@ svg { width: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-l
 .progress-status[data-state="local"] .status-dot { background: #c78a18; }
 .progress-status[data-state="error"] { color: #c44c65; }
 .progress-status[data-state="error"] .status-dot { background: #c44c65; }
-.topbar-progress { display: inline-flex; align-items: center; margin-right: 10px; color: var(--muted); white-space: nowrap; }
-.auth-button { min-height: 34px; padding: 0 11px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); font-size: 9px; font-weight: 600; white-space: nowrap; cursor: pointer; }
-.auth-button:hover { border-color: var(--ink); background: var(--paper); }
+.topbar-progress { display: inline-flex; align-items: center; gap: 7px; min-height: 34px; margin-right: 4px; color: var(--muted); font-size: 10px; line-height: 1.4; white-space: nowrap; }
+.topbar-progress .status-dot { flex: 0 0 6px; margin-right: 0; }
+.auth-button { appearance: none; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; min-height: 34px; padding: 8px 11px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 0; font-size: 10px; font-weight: 600; line-height: 1.4; white-space: nowrap; cursor: pointer; transition: background .18s ease, border-color .18s ease; }
+.auth-button:hover:not(:disabled) { border-color: var(--ink); background: var(--paper); }
+.auth-button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .auth-button:disabled { color: var(--muted); cursor: wait; opacity: .65; }
 [data-progress-state="saving"] .lesson-check,
 [data-progress-state="saving"] .complete-toggle,

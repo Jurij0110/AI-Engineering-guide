@@ -1,0 +1,153 @@
+export default {
+  id: "03-deep-learning-with-keras-and-tensorflow/module-2-advanced-cnns-in-keras/transpose-convolution-intro",
+  courseId: "03-deep-learning-with-keras-and-tensorflow",
+  moduleId: "module-2-advanced-cnns-in-keras",
+  title: "Transpose Convolution Intro",
+  sourcePath: "03-Deep_Learning_with_Keras_and_Tensorflow/Module-2-Advanced_CNNs_in_Keras/7-Transpose_Convolution_Intro.txt",
+  sourceFormat: "txt",
+  engine: "TransposeConvLab",
+  learningObjectives: [
+    "Explain how Transposed Convolution (Conv2DTranspose) upsamples spatial feature maps for generative models (GANs), super-resolution, and semantic segmentation.",
+    "Diagnose the cause of Checkerboard Artifacts (kernel size not divisible by stride) and apply mitigations (divisible kernels or UpSampling2D + Conv2D)."
+  ],
+  prerequisites: [
+    "Regular 2D convolution strides and pooling downsampling",
+    "Generative and autoencoder encoder-decoder architectures"
+  ],
+  scenario: {
+    description: "Investigate spatial upsampling dynamics in Conv2DTranspose. Discover why uneven receptive field overlap generates high-frequency checkerboard artifacts and how to fix them.",
+    seed: 3207
+  },
+  controls: [
+    {
+      id: "method",
+      label: "Upsampling Technique",
+      type: "select",
+      options: [
+        { value: "conv2d_transpose", label: "Conv2DTranspose (Fractionally Strided)" },
+        { value: "upsample_conv", label: "UpSampling2D (Bilinear) + Conv2D" }
+      ],
+      default: "conv2d_transpose"
+    },
+    {
+      id: "inputDim",
+      label: "Input Feature Map Dimension",
+      type: "select",
+      options: [
+        { value: "4", label: "4x4 Feature Map" },
+        { value: "8", label: "8x8 Feature Map" }
+      ],
+      default: "4"
+    },
+    {
+      id: "kernelSize",
+      label: "Kernel Size (K)",
+      type: "select",
+      options: [
+        { value: "2", label: "2x2 (Divisible by Stride 2)" },
+        { value: "3", label: "3x3 (NOT Divisible by Stride 2 - Checkerboard!)" },
+        { value: "4", label: "4x4 (Divisible by Stride 2)" }
+      ],
+      default: "3"
+    },
+    {
+      id: "stride",
+      label: "Upsampling Stride (S)",
+      type: "select",
+      options: [
+        { value: "2", label: "Stride 2 (2x Upsampling)" }
+      ],
+      default: "2"
+    },
+    {
+      id: "padding",
+      label: "Padding Mode",
+      type: "select",
+      options: [
+        { value: "same", label: "same (W_out = W_in * S)" }
+      ],
+      default: "same"
+    }
+  ],
+  views: [
+    {
+      type: "upsample-grid",
+      title: "Receptive Field Overlap & Output Matrix",
+      bindings: ["method", "kernelSize", "stride", "padding"]
+    },
+    {
+      type: "artifact-metrics",
+      title: "Artifact Diagnostics & Tensor Dimensions",
+      bindings: ["inputDim", "outputDim", "hasCheckerboard", "quality"]
+    }
+  ],
+  explanationRules: [
+    {
+      when: "method === 'conv2d_transpose' && kernelSize === '3' && stride === '2'",
+      summary: "Checkerboard Artifact Detected",
+      detail: "Because kernel size 3 is not divisible by stride 2 (3 % 2 = 1), filter footprints overlap unevenly, creating an alternating high-intensity pattern."
+    },
+    {
+      when: "kernelSize === '4' && stride === '2'",
+      summary: "Divisible Kernel Eliminates Artifacts",
+      detail: "When kernel size (4) is a multiple of stride (2), receptive field overlaps sum uniformly across all output pixels, removing the checkerboard distortion."
+    },
+    {
+      when: "method === 'upsample_conv'",
+      summary: "Bilinear Upsampling + Conv2D",
+      detail: "Decoupling upsampling (UpSampling2D) from convolution completely avoids uneven kernel overlap."
+    }
+  ],
+  presets: [
+    {
+      id: "artifact-demonstration",
+      label: "Checkerboard Artifact Example (K=3, S=2)",
+      values: { method: "conv2d_transpose", inputDim: "4", kernelSize: "3", stride: "2", padding: "same" },
+      teachingPoint: "Classic checkerboard artifact caused by 3 % 2 != 0."
+    },
+    {
+      id: "clean-divisible-solution",
+      label: "Artifact Mitigation: Kernel Size 4 (K=4, S=2)",
+      values: { method: "conv2d_transpose", inputDim: "4", kernelSize: "4", stride: "2", padding: "same" },
+      teachingPoint: "Setting kernel size to a multiple of stride yields uniform overlap and clean reconstruction."
+    }
+  ],
+  challenge: {
+    prompt: "Eliminate checkerboard artifacts in Conv2DTranspose by choosing a kernel size divisible by stride 2 (e.g. Kernel 4 with Stride 2).",
+    success: { method: "conv2d_transpose", inputDim: "4", kernelSize: "4", stride: "2", padding: "same" },
+    hints: [
+      "Keep method as Conv2DTranspose.",
+      "Select Kernel Size 4 (which is divisible by Stride 2).",
+      "Observe how the artifact alert changes to clean reconstruction."
+    ]
+  },
+  quiz: [
+    {
+      prompt: "What causes checkerboard artifacts in images generated by Conv2DTranspose layers?",
+      choices: [
+        "Uneven overlap of convolution kernels when kernel size is not divisible by the stride",
+        "Setting learning rate too low",
+        "Using RGB color instead of grayscale",
+        "Having too many layers in the discriminator"
+      ],
+      answer: 0,
+      explanation: "When kernel size cannot be cleanly divided by stride, some pixels in the feature map receive more filter applications than their neighbors."
+    },
+    {
+      prompt: "What architectural alternative replaces Conv2DTranspose to structurally prevent checkerboard patterns?",
+      choices: [
+        "UpSampling2D (e.g. bilinear interpolation) followed by standard Conv2D",
+        "Flatten followed by Dense",
+        "MaxPooling2D with stride 4",
+        "Subtracting the mean image"
+      ],
+      answer: 0,
+      explanation: "UpSampling2D smoothly magnifies spatial dimensions, and a subsequent Conv2D(same) refines features without uneven overlap."
+    }
+  ],
+  accessibility: {
+    canvasSummary: "Interactive Transposed Convolution workbench visualizing receptive field overlap patterns, spatial dimension multiplication, and checkerboard artifact diagnostics.",
+    keyboardHelp: "Use Tab and Arrow keys to change upsampling technique, kernel size, and stride."
+  }
+};
+

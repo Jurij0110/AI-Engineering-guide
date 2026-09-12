@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/base.css?v=auth-ui-2" />
     <link rel="stylesheet" href="assets/css/course-library.css" />
+    <link rel="stylesheet" href="assets/css/simulations.css" />
   </head>
   <body class="library-page">
     <header class="topbar library-topbar">
@@ -84,6 +85,64 @@
         <p>Try a different search or material type.</p>
       </section>
     </main>
+
+    <dialog id="simulation-dialog" class="simulation-dialog" aria-labelledby="simulation-title" aria-describedby="simulation-context">
+      <div class="simulation-panel" data-state="idle">
+        <header class="simulation-header">
+          <div>
+            <span class="simulation-kicker">Interactive simulation</span>
+            <h2 id="simulation-title">Lesson simulation</h2>
+            <p id="simulation-context"></p>
+          </div>
+          <button class="simulation-icon-button" type="button" data-simulation-close aria-label="Close simulation">×</button>
+        </header>
+
+        <div class="simulation-layout">
+          <aside class="simulation-brief" aria-label="Lesson guide">
+            <section>
+              <span class="simulation-label">Learning objectives</span>
+              <ul id="simulation-objectives"></ul>
+            </section>
+            <section>
+              <span class="simulation-label">Challenge</span>
+              <p id="simulation-challenge">Loading challenge…</p>
+            </section>
+            <section>
+              <span class="simulation-label">Keyboard help</span>
+              <p id="simulation-keyboard-help">Loading keyboard instructions…</p>
+            </section>
+            <a id="simulation-source" class="simulation-source-link" href="#" target="_blank" rel="noreferrer">Open lesson source</a>
+          </aside>
+
+          <section class="simulation-stage" aria-label="Interactive model">
+            <div id="simulation-loading" class="simulation-loading" role="status">
+              <span aria-hidden="true"></span>
+              <strong>Loading simulation</strong>
+              <p>The engine is downloaded only when you open it.</p>
+            </div>
+            <div id="simulation-error" class="simulation-error" role="alert" hidden>
+              <strong>Simulator unavailable</strong>
+              <p id="simulation-error-message"></p>
+              <button type="button" data-simulation-retry>Retry</button>
+            </div>
+            <div id="simulation-mount"></div>
+            <div class="simulation-summary">
+              <span class="simulation-label">Current result</span>
+              <p id="simulation-summary">Adjust the controls to explore this simulation.</p>
+            </div>
+            <p id="simulation-live-summary" class="sr-only" aria-live="polite"></p>
+          </section>
+        </div>
+
+        <footer class="simulation-footer">
+          <button type="button" data-simulation-reset disabled>Reset simulation</button>
+          <div>
+            <button type="button" data-simulation-complete aria-pressed="false">Mark lesson complete</button>
+            <button type="button" data-simulation-close>Close</button>
+          </div>
+        </footer>
+      </div>
+    </dialog>
 
     <script src="assets/data/course-libraries.js"></script>
     <script type="module" src="assets/js/course-library/app.js"></script>

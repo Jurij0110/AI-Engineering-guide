@@ -74,6 +74,16 @@ No Python server or SQLite database is used in production.
 - `course-library.html?id=...` — repository index and hierarchical progress tracker.
 - `ibm-ai-engineering.html` — compatibility redirect for the original IBM URL.
 
+## Course simulations
+
+The IBM course library displays **Simulation** beside the 94 source lessons that have a validated simulator spec. The other 214 catalogued lessons are marked **Simulation planned**; unrelated repository files have no simulation action. A simulation opens inside the existing course UI, loads its spec and engine on demand, and links back to the original GitHub lesson. It does not run notebook code or require a simulator server.
+
+Simulation controls and Reset do not change progress. Only the explicit **Mark lesson complete** button calls the existing Firebase-backed progress store, using the same `file.path` key as the library checkbox. Close the dialog with Escape or either Close button. If an engine fails to load, the dialog offers Retry without affecting the course index.
+
+The exact `libraryId + sourcePath` lookup and `ready`/`planned` states live in `assets/data/simulation-catalog.mjs`. To add a future simulation, create a validated spec in `assets/js/simulations/lessons/`, register its engine in `engine-loaders.js` if needed, then update the matching manifest entry to `ready` with its local `./lessons/...js` specifier. Do not normalize repository paths or change completion keys. The assets work at both a local HTTP origin and the GitHub Pages project subpath.
+
+Run the static and integration checks with `python -m unittest discover -s tests -v`. With Node.js 22+ installed, also run `node --test tests/simulation-contract.test.mjs` to import every spec and engine. Provenance and redistribution notes are in `assets/js/simulations/NOTICE.md`.
+
 ## Source structure
 
 ```text
@@ -85,12 +95,14 @@ AI-course/
 `-- assets/
     |-- css/
     |-- data/
-    |   `-- course-libraries.js
+    |   |-- course-libraries.js
+    |   `-- simulation-catalog.mjs
     `-- js/
         |-- firebase-config.js
         |-- progress-store.js
         |-- course-catalog/
         |-- course-library/
+        |-- simulations/
         `-- roadmap/
 ```
 

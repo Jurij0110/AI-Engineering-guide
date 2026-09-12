@@ -1,4 +1,5 @@
 import { ProgressStore, setupAuthControls } from "../progress-store.js";
+import { findSimulation } from "../../data/simulation-catalog.mjs";
 
 setupAuthControls();
 
@@ -24,6 +25,9 @@ let courses = [];
 let query = "";
 let activeType = "all";
 const completedFiles = new Set();
+let simulationIntegrationPromise = null;
+let simulationLaunchGeneration = 0;
+let simulationReturnFocus = null;
 
 function renderLibraryShell() {
   document.title = library.title;
@@ -56,18 +60,20 @@ async function setFilesComplete(files, checked) {
   renderRepository();
   try {
     await saveProgress();
+    return true;
   } catch (error) {
     completedFiles.clear();
     previousItems.forEach((item) => completedFiles.add(item));
     renderCourseIndex();
     renderRepository();
     console.error(error);
+    return false;
   }
 }
 
 function classifyFile(path) {
   const lower = path.toLowerCase();
-  const filename = path.split("/").at(-1);
+  const filename = path.split("/").at(-1).trimEnd();
   const extension = filename.includes(".") ? filename.split(".").at(-1).toLowerCase() : "";
   if (lower.includes("/certificate/")) return { type: "resource", label: "Certificate" };
   if (/final[_ -]?project|practice[_ -]?project|capstone|exam|qa_bot_project/.test(lower)) return { type: "assignment", label: "Project" };
@@ -79,7 +85,7 @@ function classifyFile(path) {
 }
 
 function cleanName(value) {
-  return value
+  return value.trimEnd()
     .replace(/\.(ipynb|txt|md|pdf|png|jpg|jpeg|py|json|csv)$/i, "")
     .replace(/^\d+[-_]?/, "")
     .replaceAll("_", " ")
@@ -106,7 +112,7 @@ function buildCourses(tree) {
       moduleMap.get(key).push({
         path: entry.path,
         name: cleanName(parts.at(-1)),
-        filename: parts.at(-1),
+        filename: parts.at(-1).trimEnd(),
         ...classification
       });
     });
@@ -145,6 +151,15 @@ function renderFile(file) {
   const isNotebook = file.filename.endsWith(".ipynb");
   const encodedPath = file.path.split("/").map(part => encodeURIComponent(part)).join("/");
   const colabUrl = isNotebook ? `https://colab.research.google.com/github/${repository}/blob/${branch}/${encodedPath}` : "";
+  const simulation = findSimulation(library.id, file.path);
+  const simulationAction = simulation?.status === "ready"
+    ? `<button class="simulation-launch" type="button" data-simulation-path="${encodeURIComponent(file.path)}">Simulation</button>`
+    : simulation?.status === "planned"
+      ? `<span class="simulation-planned" title="This lesson is mapped; its simulation is planned">Simulation planned</span>`
+      : "";
+  const colabAction = isNotebook
+    ? `<a class="colab-link" href="${colabUrl}" target="_blank" rel="noreferrer" title="Open executable Jupyter Notebook in Google Colab"><svg aria-hidden="true" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 2A10 10 0 1 0 22 12 10.011 10.011 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8.009 8.009 0 0 1-8 8z"/><path d="M9.5 16.5l7-4.5-7-4.5v9z"/></svg><span>Colab</span></a>`
+    : "";
 
   return `<div class="material-row ${checked ? "is-complete" : ""}">
     <label class="library-check"><input type="checkbox" data-file-path="${file.path}" ${checked ? "checked" : ""}><span></span><span class="sr-only">Mark ${file.name} complete</span></label>
@@ -153,8 +168,80 @@ function renderFile(file) {
       <span class="material-name"><strong>${file.name}</strong><small>${file.filename}</small></span>
       <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M14 5h5v5M19 5l-8 8"></path><path d="M19 13v6H5V5h6"></path></svg>
     </a>
-    ${isNotebook ? `<a class="colab-link" href="${colabUrl}" target="_blank" rel="noreferrer" title="Open executable Jupyter Notebook in Google Colab"><svg aria-hidden="true" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 2A10 10 0 1 0 22 12 10.011 10.011 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8.009 8.009 0 0 1-8 8z"/><path d="M9.5 16.5l7-4.5-7-4.5v9z"/></svg><span>Colab</span></a>` : ""}
+    ${simulationAction || colabAction ? `<div class="material-actions">${simulationAction}${colabAction}</div>` : ""}
   </div>`;
+}
+
+function findFileContext(path) {
+  for (const course of courses) {
+    for (const module of course.modules) {
+      const file = module.files.find((item) => item.path === path);
+      if (file) return { file, course, module };
+    }
+  }
+  return null;
+}
+
+function prepareSimulationDialog({ file, course, module }, trigger) {
+  const dialog = document.querySelector("#simulation-dialog");
+  simulationReturnFocus = { trigger, path: file.path };
+  dialog.querySelector("#simulation-title").textContent = file.name;
+  dialog.querySelector("#simulation-context").textContent = `${course.title} · ${module.title}`;
+  const source = dialog.querySelector("#simulation-source");
+  source.href = githubPath(file.path);
+  source.textContent = file.filename;
+  dialog.querySelector("#simulation-objectives").replaceChildren();
+  dialog.querySelector("#simulation-challenge").textContent = "Loading challenge…";
+  dialog.querySelector("#simulation-keyboard-help").textContent = "Loading keyboard instructions…";
+  dialog.querySelector("#simulation-loading").hidden = false;
+  dialog.querySelector("#simulation-error").hidden = true;
+  dialog.querySelector("#simulation-mount").replaceChildren();
+  dialog.querySelector("#simulation-summary").textContent = "Loading the interactive model…";
+  if (!dialog.open) dialog.showModal();
+  dialog.querySelector("[data-simulation-close]").focus();
+  return dialog;
+}
+
+async function loadSimulationIntegration() {
+  if (!simulationIntegrationPromise) {
+    simulationIntegrationPromise = import("../simulations/integration.js")
+      .then(({ createSimulationIntegration }) => createSimulationIntegration({
+        dialog: document.querySelector("#simulation-dialog"),
+        isComplete: (file) => completedFiles.has(file.path),
+        setComplete: (file, checked) => setFilesComplete([file], checked)
+      }))
+      .catch((error) => {
+        simulationIntegrationPromise = null;
+        throw error;
+      });
+  }
+  return simulationIntegrationPromise;
+}
+
+async function openSimulation(context, entry, trigger) {
+  const token = ++simulationLaunchGeneration;
+  const dialog = prepareSimulationDialog(context, trigger);
+  const retryButton = dialog.querySelector("[data-simulation-retry]");
+  retryButton.onclick = null;
+
+  try {
+    const integration = await loadSimulationIntegration();
+    if (token !== simulationLaunchGeneration || !dialog.open) return;
+    retryButton.onclick = null;
+    await integration.open({
+      ...context,
+      entry,
+      trigger,
+      sourceUrl: githubPath(context.file.path)
+    });
+  } catch (error) {
+    if (token !== simulationLaunchGeneration || !dialog.open) return;
+    dialog.querySelector("#simulation-loading").hidden = true;
+    dialog.querySelector("#simulation-error").hidden = false;
+    dialog.querySelector("#simulation-error-message").textContent = error?.message || "The simulator runtime could not be loaded.";
+    dialog.querySelector("#simulation-summary").textContent = "Simulation unavailable. You can retry without leaving this lesson.";
+    retryButton.onclick = () => openSimulation(context, entry, trigger);
+  }
 }
 
 function renderRepository() {
@@ -207,6 +294,15 @@ document.querySelectorAll("[data-type]").forEach((button) => button.addEventList
 }));
 
 document.querySelector("#repository-content").addEventListener("click", (event) => {
+  const simulationButton = event.target.closest("[data-simulation-path]");
+  if (simulationButton) {
+    const path = decodeURIComponent(simulationButton.dataset.simulationPath);
+    const entry = findSimulation(library.id, path);
+    const context = findFileContext(path);
+    if (entry?.status === "ready" && context) openSimulation(context, entry, simulationButton);
+    return;
+  }
+
   const progressControl = event.target.closest("[data-prevent-toggle]");
   if (!progressControl) return;
   event.preventDefault();
@@ -216,6 +312,19 @@ document.querySelector("#repository-content").addEventListener("click", (event) 
   input.indeterminate = false;
   input.dispatchEvent(new Event("change", { bubbles: true }));
 }, true);
+
+document.querySelectorAll("[data-simulation-close]").forEach((button) => {
+  button.addEventListener("click", () => document.querySelector("#simulation-dialog").close());
+});
+
+document.querySelector("#simulation-dialog").addEventListener("close", () => {
+  simulationLaunchGeneration += 1;
+  const fallback = simulationReturnFocus
+    ? document.querySelector(`[data-simulation-path="${encodeURIComponent(simulationReturnFocus.path)}"]`)
+    : null;
+  (simulationReturnFocus?.trigger?.isConnected ? simulationReturnFocus.trigger : fallback)?.focus();
+  simulationReturnFocus = null;
+});
 
 document.querySelector("#repository-content").addEventListener("change", (event) => {
   const input = event.target;

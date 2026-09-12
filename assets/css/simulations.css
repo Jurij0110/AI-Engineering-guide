@@ -1,0 +1,437 @@
+.material-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+.simulation-launch,
+.simulation-planned {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 5px 9px;
+  border-radius: 4px;
+  font: 600 9px/1 "DM Mono", monospace;
+  white-space: nowrap;
+}
+
+.simulation-launch {
+  color: white;
+  background: var(--ink);
+  border: 1px solid var(--ink);
+  cursor: pointer;
+}
+
+.simulation-launch:hover { color: white; background: var(--accent); border-color: var(--accent); }
+.simulation-launch:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+.simulation-planned {
+  color: var(--muted);
+  background: transparent;
+  border: 1px dashed #b9c0bc;
+}
+
+.simulation-dialog {
+  width: min(1180px, calc(100vw - 32px));
+  max-width: none;
+  max-height: calc(100dvh - 32px);
+  padding: 0;
+  overflow: auto;
+  color: var(--ink);
+  background: var(--surface);
+  border: 0;
+  box-shadow: 0 30px 100px rgba(16, 24, 21, .35);
+}
+
+.simulation-dialog::backdrop {
+  background: rgba(21, 28, 26, .65);
+  backdrop-filter: blur(4px);
+}
+
+.simulation-panel {
+  --bg: var(--paper);
+  --panel: var(--surface);
+  --panel-muted: #e8ebe7;
+  --text: var(--ink);
+  --fg: var(--ink);
+  --border: var(--line);
+  --status: #26785e;
+  --error: #a23f2d;
+  min-width: 0;
+  color: var(--ink);
+  background: var(--surface);
+}
+
+.simulation-panel *, .simulation-panel *::before, .simulation-panel *::after { box-sizing: border-box; }
+
+.simulation-header {
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 28px;
+  padding: 24px 28px 21px;
+  background: rgba(255, 255, 255, .96);
+  border-top: 5px solid var(--accent);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(12px);
+}
+
+.simulation-kicker,
+.simulation-label {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--accent);
+  font: 500 9px "DM Mono", monospace;
+  text-transform: uppercase;
+}
+
+.simulation-header h2 { margin: 0 0 7px; font-size: clamp(22px, 4vw, 32px); line-height: 1.15; }
+.simulation-header p { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.5; }
+
+.simulation-icon-button {
+  flex: 0 0 auto;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.simulation-icon-button:hover { border-color: var(--ink); }
+
+.simulation-layout {
+  display: grid;
+  grid-template-columns: minmax(210px, .3fr) minmax(0, 1fr);
+  min-width: 0;
+}
+
+.simulation-brief {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 28px;
+  background: #f4f5f1;
+  border-right: 1px solid var(--line);
+}
+
+.simulation-brief section { padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+.simulation-brief ul { display: grid; gap: 9px; margin: 0; padding: 0 0 0 17px; }
+.simulation-brief li, .simulation-brief p { color: var(--muted); font-size: 10px; line-height: 1.6; }
+.simulation-brief p { margin: 0; }
+
+.simulation-source-link {
+  margin-top: auto;
+  color: var(--ink);
+  font: 500 9px/1.45 "DM Mono", monospace;
+  overflow-wrap: anywhere;
+}
+
+.simulation-stage { min-width: 0; padding: 28px; }
+.simulation-stage > [hidden] { display: none !important; }
+
+.simulation-loading {
+  display: grid;
+  justify-items: center;
+  padding: 80px 20px;
+  text-align: center;
+  border: 1px dashed var(--line);
+}
+
+.simulation-loading > span {
+  width: 25px;
+  height: 25px;
+  margin-bottom: 14px;
+  border: 2px solid var(--line);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: simulation-spin .8s linear infinite;
+}
+
+.simulation-loading strong { font-size: 12px; }
+.simulation-loading p { margin: 6px 0 0; color: var(--muted); font-size: 10px; }
+
+.simulation-error {
+  padding: 24px;
+  color: #6f2d22;
+  background: #fff1ed;
+  border-left: 4px solid var(--accent);
+}
+
+.simulation-error p { margin: 7px 0 16px; font-size: 11px; line-height: 1.55; }
+
+.simulation-error button,
+.simulation-footer button,
+.simulation-panel [data-regression-lab] button {
+  min-height: 36px;
+  padding: 8px 12px;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 0;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.simulation-error button:hover,
+.simulation-footer button:hover:not(:disabled),
+.simulation-panel [data-regression-lab] button:hover { border-color: var(--ink); background: var(--paper); }
+.simulation-panel button:focus-visible,
+.simulation-panel input:focus-visible,
+.simulation-panel select:focus-visible,
+.simulation-panel a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.simulation-panel button:disabled { color: var(--muted); cursor: wait; opacity: .55; }
+
+#simulation-mount { min-width: 0; }
+
+.simulation-panel .lab-container,
+.simulation-panel [data-regression-lab] {
+  display: grid;
+  gap: 20px;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.simulation-panel .metrics-row,
+.simulation-panel [data-regression-lab] div[aria-label="Regression metrics"] {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 125px), 1fr));
+  gap: 9px;
+}
+
+.simulation-panel .metric-card,
+.simulation-panel [data-regression-lab] [data-metric-card] {
+  min-width: 0;
+  padding: 12px;
+  text-align: center;
+  background: var(--paper);
+  border: 1px solid var(--line);
+}
+
+.simulation-panel .metric-card .label,
+.simulation-panel [data-regression-lab] [data-metric-card] h3 {
+  display: block;
+  margin: 0 0 5px;
+  color: var(--muted);
+  font: 500 8px/1.4 "DM Mono", monospace;
+  text-transform: uppercase;
+}
+
+.simulation-panel .metric-card strong,
+.simulation-panel [data-regression-lab] [data-metric-card] p {
+  display: block;
+  margin: 0;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+
+.simulation-panel .controls-panel,
+.simulation-panel [data-regression-lab] div[aria-label="Regression controls"] {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+  gap: 12px;
+  padding: 16px;
+  background: #f4f5f1;
+  border: 1px solid var(--line);
+}
+
+.simulation-panel .control-group,
+.simulation-panel [data-regression-lab] div[aria-label="Regression controls"] > div {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+
+.simulation-panel .control-group label,
+.simulation-panel [data-regression-lab] div[aria-label="Regression controls"] label {
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.simulation-panel input,
+.simulation-panel select,
+.simulation-panel output {
+  max-width: 100%;
+  min-width: 0;
+  font: 10px "DM Mono", monospace;
+}
+
+.simulation-panel select,
+.simulation-panel input:not([type="range"]):not([type="checkbox"]) {
+  width: 100%;
+  min-height: 36px;
+  padding: 7px 9px;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 0;
+}
+
+.simulation-panel input[type="range"] { width: 100%; accent-color: var(--accent); }
+.simulation-panel output { color: var(--muted); }
+
+.simulation-panel .chart-wrapper,
+.simulation-panel .matrix-wrapper,
+.simulation-panel [data-regression-lab] > svg,
+.simulation-panel [data-chart-container] {
+  min-width: 0;
+  padding: 12px;
+  overflow-x: auto;
+  background: var(--paper);
+  border: 1px solid var(--line);
+}
+
+.simulation-panel svg {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  fill: initial;
+  stroke: initial;
+  stroke-width: initial;
+  stroke-linecap: initial;
+  stroke-linejoin: initial;
+}
+
+.simulation-panel [data-regression-lab] > svg { padding: 0; }
+
+.simulation-panel .confusion-matrix-table { width: 100%; border-collapse: collapse; font-size: 10px; }
+.simulation-panel .confusion-matrix-table th,
+.simulation-panel .confusion-matrix-table td { padding: 10px; text-align: center; border: 1px solid var(--line); }
+.simulation-panel .confusion-matrix-table th { color: var(--muted); background: var(--paper); }
+.simulation-panel .cell-tp, .simulation-panel .cell-tn { background: #edf6f0; }
+.simulation-panel .cell-fp, .simulation-panel .cell-fn { background: #fff1ed; }
+
+.simulation-panel .leak-audit-panel,
+.simulation-panel .grid-card,
+.simulation-panel [data-regression-lab] > section,
+.simulation-panel [data-regression-lab] > p {
+  padding: 12px;
+  margin: 0;
+  background: var(--paper);
+  border-left: 3px solid var(--accent);
+  font-size: 10px;
+  line-height: 1.55;
+}
+
+.simulation-panel [data-regression-lab] > div:has(button) { display: flex; flex-wrap: wrap; gap: 7px; }
+
+.simulation-panel .ml-overview-workbench { display: grid; gap: 16px; min-width: 0; }
+.simulation-panel .ml-overview-hierarchy,
+.simulation-panel .ml-overview-controls { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 9px; }
+.simulation-panel .ml-overview-hierarchy-card,
+.simulation-panel .ml-overview-case,
+.simulation-panel .ml-overview-stage { min-width: 0; padding: 15px; background: var(--paper); border: 1px solid var(--line); }
+.simulation-panel .ml-overview-hierarchy-card { display: grid; gap: 5px; border-top: 3px solid var(--accent); }
+.simulation-panel .ml-overview-hierarchy-card strong { font-size: 18px; }
+.simulation-panel .ml-overview-hierarchy-card span,
+.simulation-panel .ml-overview-workbench p { margin: 0; color: var(--muted); font-size: 10px; line-height: 1.6; }
+.simulation-panel .ml-overview-controls { padding: 16px; background: #f4f5f1; border: 1px solid var(--line); }
+.simulation-panel .ml-overview-controls .control-group { display: grid; gap: 6px; min-width: 0; }
+.simulation-panel .ml-overview-controls label { font-size: 10px; font-weight: 600; }
+.simulation-panel .ml-overview-presets { display: flex; flex-wrap: wrap; gap: 8px; }
+.simulation-panel .ml-overview-presets button { min-height: 36px; padding: 8px 12px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); font-size: 10px; font-weight: 600; cursor: pointer; }
+.simulation-panel .ml-overview-presets button:hover { border-color: var(--ink); background: var(--paper); }
+.simulation-panel .ml-overview-case { display: grid; gap: 8px; }
+.simulation-panel .ml-overview-case h3 { margin: 0; font-size: 17px; }
+.simulation-panel .ml-overview-match { display: inline-block; width: fit-content; padding: 6px 8px; color: #8b3528; background: #fff1ed; font: 600 9px "DM Mono", monospace; }
+.simulation-panel .ml-overview-match[data-match="true"] { color: #1c654b; background: #e8f5ee; }
+.simulation-panel .ml-overview-challenge { padding: 12px 14px; background: #eef1ec; border-left: 3px solid var(--accent); }
+
+.simulation-panel .keras-graph-lab,
+.simulation-panel .tensorflow-ecosystem-lab { display: grid; gap: 15px; min-width: 0; }
+.simulation-panel .keras-graph-note { margin: 0; padding: 10px 12px; color: var(--muted); background: var(--paper); border-left: 3px solid var(--accent); font-size: 10px; line-height: 1.5; }
+.simulation-panel .keras-graph-controls,
+.simulation-panel .tensorflow-ecosystem-controls { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)); gap: 12px; padding: 16px; background: #f4f5f1; border: 1px solid var(--line); }
+.simulation-panel .keras-graph-controls .control-group,
+.simulation-panel .tensorflow-ecosystem-controls .control-group { display: grid; gap: 6px; min-width: 0; }
+.simulation-panel .keras-graph-controls label,
+.simulation-panel .tensorflow-ecosystem-controls label { font-size: 10px; font-weight: 600; }
+.simulation-panel .keras-graph-presets,
+.simulation-panel .tensorflow-ecosystem-presets { display: flex; flex-wrap: wrap; gap: 8px; }
+.simulation-panel .keras-graph-presets button,
+.simulation-panel .tensorflow-ecosystem-presets button { min-height: 36px; padding: 8px 12px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); font-size: 10px; font-weight: 600; cursor: pointer; }
+.simulation-panel .keras-graph-presets button:hover,
+.simulation-panel .tensorflow-ecosystem-presets button:hover { border-color: var(--ink); background: var(--paper); }
+.simulation-panel .keras-graph-flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 9px; padding: 15px; background: var(--paper); border: 1px solid var(--line); }
+.simulation-panel .keras-graph-node { display: grid; place-items: center; flex: 1 1 150px; min-height: 74px; padding: 12px; text-align: center; background: var(--surface); border-top: 3px solid var(--accent); border-left: 1px solid var(--line); border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); font: 600 10px/1.5 "DM Mono", monospace; }
+.simulation-panel .keras-graph-result,
+.simulation-panel .tensorflow-ecosystem-result { display: grid; gap: 8px; padding: 15px; background: var(--paper); border: 1px solid var(--line); }
+.simulation-panel .keras-graph-result p,
+.simulation-panel .tensorflow-ecosystem-result p { margin: 0; color: var(--muted); font-size: 10px; line-height: 1.6; }
+.simulation-panel .tensorflow-ecosystem-result h3 { margin: 0; font-size: 16px; }
+.simulation-panel .keras-graph-status,
+.simulation-panel .tensorflow-ecosystem-status { color: #8b3528; font: 600 10px "DM Mono", monospace; }
+.simulation-panel .keras-graph-status[data-valid="true"],
+.simulation-panel .tensorflow-ecosystem-status[data-match="true"] { color: #1c654b; }
+.simulation-panel .keras-graph-challenge,
+.simulation-panel .tensorflow-ecosystem-challenge { margin: 0; padding: 12px 14px; background: #eef1ec; border-left: 3px solid var(--accent); font-size: 10px; line-height: 1.6; }
+
+.simulation-panel .deep-vision-lab,
+.simulation-panel .image-augmentation-lab,
+.simulation-panel .transfer-learning-lab,
+.simulation-panel .transpose-conv-lab { display: grid; gap: 15px; min-width: 0; }
+.simulation-panel .deep-vision-arch-view { display: flex; flex-direction: column; gap: 10px; padding: 14px; background: var(--paper); border: 1px solid var(--line); }
+.simulation-panel .deep-vision-block { padding: 10px 14px; background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--accent); font-size: 11px; }
+.simulation-panel .deep-vision-card { padding: 10px; background: var(--surface); border: 1px solid var(--line); font-size: 11px; }
+.simulation-panel .deep-vision-pipeline-view { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 8px; }
+.simulation-panel .image-aug-preview-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 12px; justify-items: center; }
+.simulation-panel .image-aug-sample-card { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 10px; background: var(--paper); border: 1px solid var(--line); }
+.simulation-panel .image-aug-sample-label { font: 600 9px "DM Mono", monospace; color: var(--muted); }
+.simulation-panel .tl-arch-bar { padding: 10px; background: var(--paper); border: 1px solid var(--line); font-size: 10px; }
+
+.simulation-summary {
+  margin-top: 20px;
+  padding: 15px 17px;
+  background: #eef1ec;
+  border-left: 3px solid var(--ink);
+}
+
+.simulation-summary .simulation-label { color: var(--muted); }
+.simulation-summary p { margin: 0; font-size: 10px; line-height: 1.6; }
+
+.simulation-footer {
+  position: sticky;
+  z-index: 2;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 28px;
+  color: white;
+  background: #202826;
+}
+
+.simulation-footer > div { display: flex; gap: 8px; }
+.simulation-footer [data-simulation-complete] { color: white; background: var(--accent); border-color: var(--accent); }
+.simulation-footer [data-simulation-complete][data-complete="true"] { color: var(--ink); background: white; border-color: white; }
+
+@keyframes simulation-spin { to { transform: rotate(360deg); } }
+
+@media (max-width: 680px) {
+  .simulation-panel .ml-overview-hierarchy,
+  .simulation-panel .ml-overview-controls { grid-template-columns: 1fr; }
+  .material-actions { grid-column: 2; justify-content: flex-start; flex-wrap: wrap; padding-bottom: 11px; }
+  .simulation-dialog { width: calc(100vw - 16px); max-height: calc(100dvh - 16px); }
+  .simulation-header { padding: 20px 18px 17px; }
+  .simulation-layout { grid-template-columns: 1fr; }
+  .simulation-brief { gap: 17px; padding: 20px 18px; border-right: 0; border-bottom: 1px solid var(--line); }
+  .simulation-brief section { padding-bottom: 13px; }
+  .simulation-stage { padding: 20px 18px; }
+  .simulation-footer { align-items: stretch; flex-direction: column; padding: 13px 18px; }
+  .simulation-footer > div { display: grid; grid-template-columns: 1fr 1fr; }
+  .simulation-footer button { width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .simulation-loading > span { animation-duration: .01ms; animation-iteration-count: 1; }
+}

@@ -1,0 +1,43 @@
+export const engineLoaders = new Map([
+  ["MLOverviewWorkbench", () => import("./engines/ml-overview-workbench.js")],
+  ["KerasGraphLab", () => import("./engines/keras-graph-lab.js")],
+  ["TensorFlowEcosystemLab", () => import("./engines/tensorflow-ecosystem-lab.js")],
+  ["RegressionLab", () => import("./engines/regression-lab.js")],
+  ["DecisionBoundary", () => import("./engines/decision-boundary.js")],
+  ["ClassifierConceptLab", () => import("./engines/classifier-concept-lab.js")],
+  ["TreeExplorer", () => import("./engines/tree-explorer.js")],
+  ["NeighborExplorer", () => import("./engines/neighbor-explorer.js")],
+  ["EnsembleLab", () => import("./engines/ensemble-lab.js")],
+  ["ClusterExplorer", () => import("./engines/cluster-explorer.js")],
+  ["ProjectionLab", () => import("./engines/projection-lab.js")],
+  ["MetricWorkbench", () => import("./engines/metric-workbench.js")],
+  ["ValidationLab", () => import("./engines/validation-lab.js")],
+  ["RegularizationLab", () => import("./engines/regularization-lab.js")],
+  ["LeakageDetective", () => import("./engines/leakage-detective.js")],
+  ["PipelineBuilder", () => import("./engines/pipeline-builder.js")],
+  ["ProjectWorkbench", () => import("./engines/project-workbench.js")],
+  ["NeuralNetworkLab", () => import("./engines/neural-network-lab.js")],
+  ["OptimizerLab", () => import("./engines/optimizer-lab.js")],
+  ["AutogradGraph", () => import("./engines/autograd-graph.js")],
+  ["ActivationLab", () => import("./engines/activation-lab.js")],
+  ["ToolComparator", () => import("./engines/tool-comparator.js")],
+  ["CNNWorkbench", () => import("./engines/cnn-workbench.js")],
+  ["SequenceModelLab", () => import("./engines/sequence-model-lab.js")],
+  ["TransformerWorkbench", () => import("./engines/transformer-workbench.js")],
+  ["AutoencoderLab", () => import("./engines/autoencoder-lab.js")],
+  ["EmbeddingSpace", () => import("./engines/embedding-space.js")],
+  ["DeepVisionLab", () => import("./engines/deep-vision-lab.js")],
+  ["ImageAugmentationLab", () => import("./engines/image-augmentation-lab.js")],
+  ["TransferLearningLab", () => import("./engines/transfer-learning-lab.js")],
+  ["TransposeConvLab", () => import("./engines/transpose-conv-lab.js")],
+  ["TransformerArchitectureLab", () => import("./engines/transformer-architecture-lab.js")],
+  ["SequentialModelingLab", () => import("./engines/sequential-modeling-lab.js")],
+  ["DiffusionLab", () => import("./engines/diffusion-lab.js")],
+  ["GANLab", () => import("./engines/gan-lab.js")]
+]);
+
+export function registerEngineLoaders(registry) {
+  for (const [name, loader] of engineLoaders) {
+    registry.register(name, loader);
+  }
+}

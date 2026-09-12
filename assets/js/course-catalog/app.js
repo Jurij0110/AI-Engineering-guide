@@ -1,8 +1,12 @@
+import { ProgressStore, setupAuthControls } from "../progress-store.js";
+
+setupAuthControls();
+
 const libraries = window.COURSE_LIBRARIES;
+const completedByLibrary = new Map();
 
 function progressFor(library) {
-  const storageKey = library.progressStorageKey || `ai-engineer-course-library-${library.id}-progress`;
-  return JSON.parse(localStorage.getItem(storageKey) || "[]").length;
+  return completedByLibrary.get(library.id) || 0;
 }
 
 function renderLibraryCard(library, index) {
@@ -22,8 +26,32 @@ function renderLibraryCard(library, index) {
   </article>`;
 }
 
-const completedMaterials = libraries.reduce((total, library) => total + progressFor(library), 0);
-document.querySelector("#library-count").textContent = libraries.length;
-document.querySelector("#track-count").textContent = libraries.reduce((total, library) => total + library.tracks.length, 0);
-document.querySelector("#completed-count").textContent = completedMaterials;
-document.querySelector("#course-libraries").innerHTML = libraries.map(renderLibraryCard).join("");
+function renderCatalog() {
+  const completedMaterials = libraries.reduce((total, library) => total + progressFor(library), 0);
+  document.querySelector("#library-count").textContent = libraries.length;
+  document.querySelector("#track-count").textContent = libraries.reduce((total, library) => total + library.tracks.length, 0);
+  document.querySelector("#completed-count").textContent = completedMaterials;
+  document.querySelector("#course-libraries").innerHTML = libraries.map(renderLibraryCard).join("");
+}
+
+async function initialize() {
+  let loadError = null;
+  for (const library of libraries) {
+    try {
+      const storageKey = library.progressStorageKey || `ai-engineer-course-library-${library.id}-progress`;
+      const store = new ProgressStore(`library:${library.id}`, storageKey);
+      const items = await store.load();
+      completedByLibrary.set(library.id, items.length);
+    } catch (error) {
+      loadError ||= error;
+    }
+  }
+  if (loadError) {
+    const statusStore = new ProgressStore("catalog");
+    statusStore.setStatus("error", "Firebase unavailable — progress totals could not be loaded");
+    console.error(loadError);
+  }
+  renderCatalog();
+}
+
+initialize();

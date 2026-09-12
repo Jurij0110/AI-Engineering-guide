@@ -1,13 +1,78 @@
 # AI Engineer Field Guide
 
-A dependency-free learning application that runs directly from local HTML files.
+A dependency-free learning application designed for GitHub Pages. Roadmap and course-library progress can be synchronized across devices with Firebase Authentication and Cloud Firestore.
+
+## Run locally
+
+Python is only used as a static development server:
+
+```powershell
+cd D:\AI-course
+python -m http.server 8000
+```
+
+Open <http://localhost:8000>. Firebase Authentication must list `localhost` as an authorized domain. Do not open the HTML files directly because Firebase browser modules require an HTTP origin.
+
+## Firebase setup
+
+The public web configuration is stored in `assets/js/firebase-config.js`. It is safe to expose Firebase web configuration in a frontend; access control is enforced by Authentication and Firestore Security Rules. Never commit a service-account JSON file or private key.
+
+Enable Google as a provider in **Firebase Console → Authentication → Sign-in method**, then add these authorized domains:
+
+```text
+localhost
+jurij0110.github.io
+```
+
+Create a Standard Cloud Firestore database and publish these rules:
+
+```text
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{userId}/progress/{scopeId} {
+      allow read: if request.auth != null
+                  && request.auth.uid == userId;
+
+      allow create, update: if request.auth != null
+                            && request.auth.uid == userId
+                            && request.resource.data.keys()
+                                 .hasOnly(['items', 'updatedAt'])
+                            && request.resource.data.items is list
+                            && request.resource.data.items.size() <= 10000;
+
+      allow delete: if request.auth != null
+                    && request.auth.uid == userId;
+    }
+  }
+}
+```
+
+Progress documents are created automatically at:
+
+```text
+users/{firebaseUserId}/progress/{scope}
+```
+
+The scope is `roadmap` or `library:<course-id>`. Existing progress from the former browser-only storage is merged into Firestore on the first authenticated load and then removed locally.
+
+## Deploy with GitHub Pages
+
+1. Commit and push the static source to GitHub.
+2. Open the repository's **Settings → Pages**.
+3. Deploy from the desired branch and root directory.
+4. Open <https://jurij0110.github.io/AI-Engineering-guide/>.
+5. Sign in with Google, complete one lesson, refresh, and confirm the lesson remains complete.
+
+No Python server or SQLite database is used in production.
 
 ## Pages
 
-- `index.html` - the AI engineering roadmap and lesson tracker.
-- `courses.html` - the catalog of configured course libraries.
-- `course-library.html?id=...` - the reusable repository index and hierarchical progress tracker.
-- `ibm-ai-engineering.html` - a compatibility redirect for the original IBM URL.
+- `index.html` — AI engineering roadmap and lesson tracker.
+- `courses.html` — catalog of configured course libraries.
+- `course-library.html?id=...` — repository index and hierarchical progress tracker.
+- `ibm-ai-engineering.html` — compatibility redirect for the original IBM URL.
 
 ## Source structure
 
@@ -17,64 +82,18 @@ AI-course/
 |-- courses.html
 |-- course-library.html
 |-- ibm-ai-engineering.html
-|-- README.md
 `-- assets/
     |-- css/
-    |   |-- base.css
-    |   |-- course-catalog.css
-    |   `-- course-library.css
     |-- data/
     |   `-- course-libraries.js
     `-- js/
+        |-- firebase-config.js
+        |-- progress-store.js
         |-- course-catalog/
-        |   `-- app.js
         |-- course-library/
-        |   `-- app.js
         `-- roadmap/
-            `-- app.js
 ```
-
-Shared design rules live in `assets/css/base.css`. Page-specific styles and behavior belong in the matching page folder. Course metadata is separate from rendering in `assets/data/course-libraries.js`.
-
-## Progress storage
-
-Progress is stored locally in the browser and never sent to a server.
-
-- Roadmap lessons: `ai-engineer-field-guide-progress`
-- IBM repository materials: `ai-engineer-ibm-library-progress`
-
-IBM progress uses the full GitHub file path as its stable identifier. Module and course completion are derived from their child files, so no duplicate parent state is stored.
 
 ## Add another course library
 
-Add one object to `window.COURSE_LIBRARIES` in `assets/data/course-libraries.js`. No new HTML, CSS, or renderer is required.
-
-Each object defines:
-
-- `id` - URL-safe unique identifier used by `course-library.html?id=...`.
-- `title`, `shortTitle`, `provider`, `eyebrow`, and `description` - page and catalog copy.
-- `repository` and `branch` - the public GitHub repository to index.
-- `progressStorageKey` - a unique browser storage key.
-- `integrityTitle` and `integrityText` - source-use guidance.
-- `tracks` - top-level repository folders as `[directory, title, summary]` entries.
-
-The generic renderer reads the repository tree from GitHub, groups each track by its second-level folders, classifies materials, and creates search, filters, links, and persistent completion controls automatically.
-
-```js
-{
-    id: "new-course",
-    title: "New Course Library",
-    shortTitle: "New Course",
-    provider: "Provider",
-    eyebrow: "Repository companion",
-    description: "Course description.",
-    repository: "owner/repository",
-    branch: "main",
-    progressStorageKey: "ai-engineer-new-course-progress",
-    integrityTitle: "Use this as reference material.",
-    integrityText: "Complete graded work independently.",
-    tracks: [
-        ["01-First_Course", "First Course", "What this course covers."]
-    ]
-}
-```
+Add one object to `window.COURSE_LIBRARIES` in `assets/data/course-libraries.js`. Its `id` becomes the Firestore scope suffix. `progressStorageKey` is retained only to migrate old browser progress.

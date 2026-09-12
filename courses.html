@@ -18,6 +18,8 @@
         <span>Engineer Field Guide</span>
       </a>
       <nav class="catalog-nav" aria-label="Page navigation">
+        <span class="progress-status topbar-progress" id="progress-status" data-state="loading" role="status" aria-live="polite"><span class="status-dot" aria-hidden="true"></span><span data-progress-message>Loading progress…</span></span>
+        <button class="auth-button" id="auth-button" type="button">Sign in with Google</button>
         <a href="index.html">Roadmap</a>
         <a class="active" href="courses.html" aria-current="page">Course library</a>
       </nav>
@@ -40,6 +42,6 @@
     </main>
 
     <script src="assets/data/course-libraries.js"></script>
-    <script src="assets/js/course-catalog/app.js"></script>
+    <script type="module" src="assets/js/course-catalog/app.js"></script>
   </body>
 </html>

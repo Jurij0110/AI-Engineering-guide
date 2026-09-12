@@ -1,3 +1,7 @@
+import { ProgressStore, setupAuthControls } from "../progress-store.js";
+
+setupAuthControls();
+
 const phases = [
   {
     id: "foundations",
@@ -520,7 +524,8 @@ function escapeHtml(value) {
 }
 
 const storageKey = "ai-engineer-field-guide-progress";
-const completed = new Set(JSON.parse(localStorage.getItem(storageKey) || "[]"));
+const progressStore = new ProgressStore("roadmap", storageKey);
+const completed = new Set();
 let activeFilter = "all";
 let query = "";
 
@@ -633,17 +638,25 @@ function openLesson(lessonId, phaseId) {
 }
 
 function saveProgress() {
-  localStorage.setItem(storageKey, JSON.stringify([...completed]));
+  return progressStore.replace(completed);
 }
 
-document.addEventListener("change", (event) => {
+document.addEventListener("change", async (event) => {
   const lessonId = event.target.dataset.lessonId || event.target.dataset.dialogLesson;
   if (!lessonId) return;
+  const wasCompleted = completed.has(lessonId);
   event.target.checked ? completed.add(lessonId) : completed.delete(lessonId);
-  saveProgress();
   renderNavigation();
   renderCurriculum();
   if (event.target.dataset.dialogLesson) dialog.close();
+  try {
+    await saveProgress();
+  } catch (error) {
+    wasCompleted ? completed.add(lessonId) : completed.delete(lessonId);
+    renderNavigation();
+    renderCurriculum();
+    console.error(error);
+  }
 });
 
 document.addEventListener("click", (event) => {
@@ -662,17 +675,36 @@ document.querySelectorAll("[data-filter]").forEach((button) => button.addEventLi
   renderCurriculum();
 }));
 
-document.querySelector("#reset-progress").addEventListener("click", () => {
+document.querySelector("#reset-progress").addEventListener("click", async () => {
   if (!completed.size || !window.confirm("Reset all course progress?")) return;
+  const previousItems = [...completed];
   completed.clear();
-  saveProgress();
   renderNavigation();
   renderCurriculum();
+  try {
+    await saveProgress();
+  } catch (error) {
+    previousItems.forEach((item) => completed.add(item));
+    renderNavigation();
+    renderCurriculum();
+    console.error(error);
+  }
 });
 
 dialog.addEventListener("click", (event) => {
   if (event.target === dialog) dialog.close();
 });
 
-renderNavigation();
-renderCurriculum();
+async function initialize() {
+  try {
+    const items = await progressStore.load();
+    items.forEach((item) => completed.add(item));
+  } catch (error) {
+    progressStore.setStatus("error", "Firebase unavailable — progress is not being synced");
+    console.error(error);
+  }
+  renderNavigation();
+  renderCurriculum();
+}
+
+initialize();

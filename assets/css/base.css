@@ -49,6 +49,23 @@ svg { width: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-l
 #phase-nav small { float: right; margin-left: 5px; color: #76827d; font: 10px "DM Mono", monospace; }
 .sidebar-note { margin-top: auto; padding: 14px 8px 0; border-top: 1px solid rgba(255,255,255,.12); color: #8f9b96; font-size: 10px; }
 .status-dot { display: inline-block; width: 6px; height: 6px; margin-right: 6px; border-radius: 50%; background: #64bd8d; }
+.progress-status { font-size: 10px; }
+.progress-status[data-state="loading"] .status-dot,
+.progress-status[data-state="saving"] .status-dot { background: #c78a18; animation: status-pulse 1.2s ease-in-out infinite; }
+.progress-status[data-state="saved"] .status-dot { background: #64bd8d; }
+.progress-status[data-state="local"] { color: #9a6a12; }
+.progress-status[data-state="local"] .status-dot { background: #c78a18; }
+.progress-status[data-state="error"] { color: #c44c65; }
+.progress-status[data-state="error"] .status-dot { background: #c44c65; }
+.topbar-progress { display: inline-flex; align-items: center; margin-right: 10px; color: var(--muted); white-space: nowrap; }
+.auth-button { min-height: 34px; padding: 0 11px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); font-size: 9px; font-weight: 600; white-space: nowrap; cursor: pointer; }
+.auth-button:hover { border-color: var(--ink); background: var(--paper); }
+.auth-button:disabled { color: var(--muted); cursor: wait; opacity: .65; }
+[data-progress-state="saving"] .lesson-check,
+[data-progress-state="saving"] .complete-toggle,
+[data-progress-state="saving"] .library-check,
+[data-progress-state="saving"] #reset-progress { pointer-events: none; opacity: .55; }
+@keyframes status-pulse { 50% { opacity: .35; } }
 
 .main-content { min-width: 0; padding: 48px clamp(24px, 5vw, 72px) 100px; }
 .course-intro { max-width: 1120px; margin: 0 auto 46px; display: grid; grid-template-columns: minmax(0, 1fr) 230px; gap: 50px; align-items: end; }
@@ -184,6 +201,7 @@ dialog::backdrop { background: rgba(21,28,26,.65); backdrop-filter: blur(4px); }
 
 @media (max-width: 600px) {
   .library-link { display: none; }
+  .auth-button { padding: 0 8px; }
   .brand > span:last-child { font-size: 13px; }
   .search { width: 42px; padding: 0 11px; }
   .search input { width: 0; opacity: 0; }
@@ -210,4 +228,8 @@ dialog::backdrop { background: rgba(21,28,26,.65); backdrop-filter: blur(4px); }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; }
+}
+
+@media (max-width: 760px) {
+  .topbar-progress { display: none; }
 }

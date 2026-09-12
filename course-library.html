@@ -18,6 +18,8 @@
         <span>Course Library</span>
       </a>
       <nav class="library-nav" aria-label="Page navigation">
+        <span class="progress-status topbar-progress" id="progress-status" data-state="loading" role="status" aria-live="polite"><span class="status-dot" aria-hidden="true"></span><span data-progress-message>Loading progress…</span></span>
+        <button class="auth-button" id="auth-button" type="button">Sign in with Google</button>
         <a href="index.html">Roadmap</a>
         <a href="courses.html">All courses</a>
         <a id="library-nav-title" class="active" href="#" aria-current="page">Course</a>
@@ -84,6 +86,6 @@
     </main>
 
     <script src="assets/data/course-libraries.js"></script>
-    <script src="assets/js/course-library/app.js"></script>
+    <script type="module" src="assets/js/course-library/app.js"></script>
   </body>
 </html>

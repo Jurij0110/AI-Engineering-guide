@@ -1,3 +1,7 @@
+import { ProgressStore, setupAuthControls } from "../progress-store.js";
+
+setupAuthControls();
+
 const libraryId = new URLSearchParams(location.search).get("id") || "ibm-ai-engineering";
 const library = window.COURSE_LIBRARIES.find((item) => item.id === libraryId);
 
@@ -7,6 +11,7 @@ const { repository, branch } = library;
 const repositoryUrl = `https://github.com/${repository}`;
 const treeUrl = `https://api.github.com/repos/${repository}/git/trees/${branch}?recursive=1`;
 const progressStorageKey = library.progressStorageKey || `ai-engineer-course-library-${library.id}-progress`;
+const progressStore = new ProgressStore(`library:${library.id}`, progressStorageKey);
 
 const courseCatalog = library.tracks.map(([directory, title, summary], index) => ({
   directory,
@@ -18,7 +23,7 @@ const courseCatalog = library.tracks.map(([directory, title, summary], index) =>
 let courses = [];
 let query = "";
 let activeType = "all";
-const completedFiles = new Set(JSON.parse(localStorage.getItem(progressStorageKey) || "[]"));
+const completedFiles = new Set();
 
 function renderLibraryShell() {
   document.title = library.title;
@@ -36,7 +41,7 @@ function renderLibraryShell() {
 }
 
 function saveProgress() {
-  localStorage.setItem(progressStorageKey, JSON.stringify([...completedFiles]));
+  return progressStore.replace(completedFiles);
 }
 
 function completionState(files) {
@@ -44,11 +49,20 @@ function completionState(files) {
   return { complete, total: files.length, checked: complete === files.length, indeterminate: complete > 0 && complete < files.length };
 }
 
-function setFilesComplete(files, checked) {
+async function setFilesComplete(files, checked) {
+  const previousItems = new Set(completedFiles);
   files.forEach((file) => checked ? completedFiles.add(file.path) : completedFiles.delete(file.path));
-  saveProgress();
   renderCourseIndex();
   renderRepository();
+  try {
+    await saveProgress();
+  } catch (error) {
+    completedFiles.clear();
+    previousItems.forEach((item) => completedFiles.add(item));
+    renderCourseIndex();
+    renderRepository();
+    console.error(error);
+  }
 }
 
 function classifyFile(path) {
@@ -220,19 +234,33 @@ document.querySelector("#repository-content").addEventListener("change", (event)
   }
 });
 
-renderLibraryShell();
-
-fetch(treeUrl)
-  .then((response) => {
+async function initialize() {
+  renderLibraryShell();
+  const treeRequest = fetch(treeUrl).then((response) => {
     if (!response.ok) throw new Error(`GitHub API returned ${response.status}`);
     return response.json();
-  })
-  .then((data) => {
+  });
+
+  try {
+    const items = await progressStore.load();
+    items.forEach((item) => completedFiles.add(item));
+  } catch (error) {
+    progressStore.setStatus("error", "Firebase unavailable — progress is not being synced");
+    console.error(error);
+  }
+
+  try {
+    const data = await treeRequest;
     if (data.truncated) throw new Error("GitHub returned a truncated repository tree");
     courses = buildCourses(data.tree);
     renderStats();
     renderCourseIndex();
     renderRepository();
     document.querySelector("#source-status").innerHTML = `<span class="status-pulse"></span>Live index · complete tree`;
-  })
-  .catch(showError);
+  } catch (error) {
+    console.error(error);
+    showError();
+  }
+}
+
+initialize();

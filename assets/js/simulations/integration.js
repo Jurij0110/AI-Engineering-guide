@@ -114,7 +114,8 @@ export function createSimulationIntegration({ dialog, isComplete, setComplete })
     try {
       const specModule = await importLessonSpec(activeEntry.specifier);
       if (token !== generation) return;
-      const spec = specModule?.default;
+      const specExport = specModule?.default;
+      const spec = typeof specExport === "function" ? specExport(activeEntry) : specExport;
       assertMatchingSpec(activeEntry, spec);
 
       const engineModule = await registry.load(activeEntry.engine);

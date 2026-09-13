@@ -1196,9 +1196,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-tensor-and-datasets",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-1-Tensor_and_Datasets/01-Tensors_Overview.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-1-tensor-and-datasets/tensors-1-d",
@@ -1207,9 +1207,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-tensor-and-datasets",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-1-Tensor_and_Datasets/02-Tensors_1D.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-1-tensor-and-datasets/1-d-tensors-lab",
@@ -1218,9 +1218,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-tensor-and-datasets",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-1-Tensor_and_Datasets/03-1D_Tensors_Lab.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-1-tensor-and-datasets/two-d-tensors",
@@ -1229,9 +1229,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-tensor-and-datasets",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-1-Tensor_and_Datasets/04-Two-D-Tensors.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-1-tensor-and-datasets/two-d-tensors-lab",
@@ -1240,9 +1240,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-tensor-and-datasets",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-1-Tensor_and_Datasets/05-Two_D_Tensors_Lab.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-1-tensor-and-datasets/differentiation-in-pytorch",
@@ -1251,9 +1251,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-tensor-and-datasets",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-1-Tensor_and_Datasets/06-Differentiation_in_Pytorch.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-1-tensor-and-datasets/pytorch-derivatives-lab",
@@ -1262,9 +1262,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-tensor-and-datasets",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-1-Tensor_and_Datasets/07-Pytorch_Derivatives_Lab.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-1-tensor-and-datasets/simple-dataset",
@@ -1273,9 +1273,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-tensor-and-datasets",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-1-Tensor_and_Datasets/08-Simple_Dataset.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-1-tensor-and-datasets/simple-dataset-lab",
@@ -1284,9 +1284,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-tensor-and-datasets",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-1-Tensor_and_Datasets/09-Simple_Dataset_Lab.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-1-tensor-and-datasets/dataset-continued",
@@ -1295,9 +1295,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-tensor-and-datasets",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-1-Tensor_and_Datasets/10-Dataset_Continued.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-1-tensor-and-datasets/datasets-and-transforms-lab",
@@ -1306,9 +1306,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-tensor-and-datasets",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-1-Tensor_and_Datasets/11-Datasets_and_Transforms_Lab.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-1-tensor-and-datasets/prebuilt-datasets-and-transforms",
@@ -1317,9 +1317,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-tensor-and-datasets",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-1-Tensor_and_Datasets/12-Prebuilt_Datasets_and_Transforms.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-2-linear-regression/simple-linear-regression",
@@ -1328,9 +1328,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-linear-regression",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-2-Linear_Regression/1-Simple_Linear_Regression.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-2-linear-regression/simple-linear-regression-lab",
@@ -1339,9 +1339,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-linear-regression",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-2-Linear_Regression/2-Simple_Linear_Regression_Lab.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-2-linear-regression/linear-regression-training",
@@ -1350,9 +1350,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-linear-regression",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-2-Linear_Regression/3-Linear_Regression_Training.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-2-linear-regression/loss-and-gradient-descent",
@@ -1361,9 +1361,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-linear-regression",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-2-Linear_Regression/4-Loss_and_Gradient_Descent.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-2-linear-regression/gradient-descent-in-pytorch",
@@ -1372,9 +1372,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-linear-regression",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-2-Linear_Regression/5-Gradient_Descent_in_Pytorch.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-2-linear-regression/simple-linear-regression-training-lab",
@@ -1383,9 +1383,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-linear-regression",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-2-Linear_Regression/6-Simple_Linear_Regression_Training_Lab.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-2-linear-regression/regression-with-multiple-parameters",
@@ -1394,9 +1394,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-linear-regression",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-2-Linear_Regression/7-Regression_with_Multiple_Parameters.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-2-linear-regression/training-slope-and-bias-lab",
@@ -1405,9 +1405,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-linear-regression",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-2-Linear_Regression/8-Training_Slope_and_Bias_Lab.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-2-linear-regression/lin-regression-best-practices",
@@ -1416,9 +1416,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-linear-regression",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-2-Linear_Regression/9-Lin_Regression_Best_Practices.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-3-linear-regression-pytorch-way/stochastic-gradient-descent",
@@ -1427,9 +1427,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-3-linear-regression-pytorch-way",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-3-Linear_Regression_Pytorch_Way/1-Stochastic_Gradient_Descent.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-3-linear-regression-pytorch-way/stochastic-gradient-descent-lab",
@@ -1438,9 +1438,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-3-linear-regression-pytorch-way",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-3-Linear_Regression_Pytorch_Way/2-Stochastic_Gradient_Descent_Lab.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-3-linear-regression-pytorch-way/minibatch-gradient-descent",
@@ -1449,9 +1449,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-3-linear-regression-pytorch-way",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-3-Linear_Regression_Pytorch_Way/3-Minibatch_Gradient_Descent.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-3-linear-regression-pytorch-way/minibatch-gradient-descent-lab",
@@ -1460,9 +1460,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-3-linear-regression-pytorch-way",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-3-Linear_Regression_Pytorch_Way/4-Minibatch_Gradient_Descent_Lab.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-3-linear-regression-pytorch-way/pytorch-optimizer",
@@ -1471,9 +1471,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-3-linear-regression-pytorch-way",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-3-Linear_Regression_Pytorch_Way/5-Pytorch_Optimizer.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-3-linear-regression-pytorch-way/pytorch-optimizer-lab",
@@ -1482,9 +1482,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-3-linear-regression-pytorch-way",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-3-Linear_Regression_Pytorch_Way/6-Pytorch_Optimizer_Lab.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-3-linear-regression-pytorch-way/train-val-test-split",
@@ -1493,9 +1493,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-3-linear-regression-pytorch-way",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-3-Linear_Regression_Pytorch_Way/7-Train_Val_Test_Split.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-3-linear-regression-pytorch-way/train-val-test-lab",
@@ -1504,9 +1504,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-3-linear-regression-pytorch-way",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-3-Linear_Regression_Pytorch_Way/8-Train_Val_Test_Lab.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-4-multiple-input-output-linear-regression/1-multi-linear-regression",
@@ -1515,9 +1515,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-4-multiple-input-output-linear-regression",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-4-Multiple_Input_Output_Linear_Regression/1-Multi_Linear_Regression.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-4-multiple-input-output-linear-regression/2-multi-linear-regression",
@@ -1526,9 +1526,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-4-multiple-input-output-linear-regression",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-4-Multiple_Input_Output_Linear_Regression/2-Multi_Linear_Regression.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-4-multiple-input-output-linear-regression/multi-lin-regression-training",
@@ -1537,9 +1537,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-4-multiple-input-output-linear-regression",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-4-Multiple_Input_Output_Linear_Regression/3-Multi_Lin_Regression_Training.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-4-multiple-input-output-linear-regression/multi-lin-regression-training-lab",
@@ -1548,9 +1548,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-4-multiple-input-output-linear-regression",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-4-Multiple_Input_Output_Linear_Regression/4-Multi_Lin_Regression_Training_Lab.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-4-multiple-input-output-linear-regression/multi-target-lin-regression",
@@ -1559,9 +1559,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-4-multiple-input-output-linear-regression",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-4-Multiple_Input_Output_Linear_Regression/5-Multi_Target_Lin_Regression.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-4-multiple-input-output-linear-regression/multi-target-lin-regression-lab",
@@ -1570,9 +1570,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-4-multiple-input-output-linear-regression",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-4-Multiple_Input_Output_Linear_Regression/6-Multi_Target_Lin_Regression_Lab.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-4-multiple-input-output-linear-regression/multi-target-lin-regression-training",
@@ -1581,9 +1581,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-4-multiple-input-output-linear-regression",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-4-Multiple_Input_Output_Linear_Regression/7-Multi_Target_Lin_Regression_Training.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-4-multiple-input-output-linear-regression/multi-target-lin-regression-training-lab",
@@ -1592,9 +1592,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-4-multiple-input-output-linear-regression",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-4-Multiple_Input_Output_Linear_Regression/8-Multi_Target_Lin_Regression_Training_Lab.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-5-logistic-regression-for-classification/linear-classifiers",
@@ -1603,9 +1603,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-5-logistic-regression-for-classification",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-5-Logistic_Regression_For_Classification/1-Linear_Classifiers.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-5-logistic-regression-for-classification/logistic-regression-prediction",
@@ -1614,9 +1614,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-5-logistic-regression-for-classification",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-5-Logistic_Regression_For_Classification/2-Logistic_Regression_Prediction.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-5-logistic-regression-for-classification/logistic-regression-prediction-lab",
@@ -1625,9 +1625,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-5-logistic-regression-for-classification",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-5-Logistic_Regression_For_Classification/3-Logistic_Regression_Prediction_Lab.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-5-logistic-regression-for-classification/bernoulli-distribution-and-max-likelihood",
@@ -1636,9 +1636,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-5-logistic-regression-for-classification",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-5-Logistic_Regression_For_Classification/4-Bernoulli_Distribution_and_Max_Likelihood.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-5-logistic-regression-for-classification/crossentropy-loss",
@@ -1647,9 +1647,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-5-logistic-regression-for-classification",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-5-Logistic_Regression_For_Classification/5-Crossentropy_Loss.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-5-logistic-regression-for-classification/logistic-regression-bad-initialization-mse-lab",
@@ -1658,9 +1658,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-5-logistic-regression-for-classification",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-5-Logistic_Regression_For_Classification/6-Logistic_Regression_Bad_Initialization_MSE_Lab.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-5-logistic-regression-for-classification/crossentropy-loss-logistic-regression",
@@ -1669,9 +1669,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-5-logistic-regression-for-classification",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-5-Logistic_Regression_For_Classification/7-Crossentropy_Loss_Logistic_Regression.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-6-final-project/practice-project",
@@ -1680,9 +1680,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-6-final-project",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-6-Final_Project/1-Practice_Project.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-6-final-project/final-project-league-of-legends-match-predictor",
@@ -1691,9 +1691,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-6-final-project",
     "sourcePath": "04-Intro_to_Neural_Networks_and_Pytorch.txt/Module-6-Final_Project/2-Final_Project_League_of_Legends_Match_Predictor.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "05-deep-learning-with-pytorch/module-2-softmax-regression/softmax",
@@ -1702,9 +1702,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-softmax-regression",
     "sourcePath": "05-Deep_Learning_with_Pytorch/Module-2-Softmax_Regression/1-Softmax.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "05-deep-learning-with-pytorch/module-2-softmax-regression/softmax-in-pytorch",
@@ -1713,9 +1713,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-softmax-regression",
     "sourcePath": "05-Deep_Learning_with_Pytorch/Module-2-Softmax_Regression/2-Softmax_in_Pytorch.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "05-deep-learning-with-pytorch/module-2-softmax-regression/softmax-1-d",
@@ -1724,9 +1724,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-softmax-regression",
     "sourcePath": "05-Deep_Learning_with_Pytorch/Module-2-Softmax_Regression/3-Softmax_1D.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "05-deep-learning-with-pytorch/module-2-softmax-regression/mnist-prediction-with-softmax",
@@ -1735,9 +1735,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-softmax-regression",
     "sourcePath": "05-Deep_Learning_with_Pytorch/Module-2-Softmax_Regression/4-MNIST_Prediction_with_Softmax.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "05-deep-learning-with-pytorch/module-3-shallow-neural-networks/neural-networks-intro",
@@ -1746,9 +1746,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-3-shallow-neural-networks",
     "sourcePath": "05-Deep_Learning_with_Pytorch/Module-3-Shallow_Neural_Networks/1-Neural_Networks_Intro.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "05-deep-learning-with-pytorch/module-3-shallow-neural-networks/simple-nn-lab",
@@ -1757,9 +1757,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-3-shallow-neural-networks",
     "sourcePath": "05-Deep_Learning_with_Pytorch/Module-3-Shallow_Neural_Networks/2-Simple_NN_Lab.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "05-deep-learning-with-pytorch/module-3-shallow-neural-networks/more-hidden-neurons-lab",
@@ -1768,9 +1768,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-3-shallow-neural-networks",
     "sourcePath": "05-Deep_Learning_with_Pytorch/Module-3-Shallow_Neural_Networks/3-More_Hidden_Neurons_Lab.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "05-deep-learning-with-pytorch/module-3-shallow-neural-networks/nn-for-xor-data-lab",
@@ -1779,9 +1779,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-3-shallow-neural-networks",
     "sourcePath": "05-Deep_Learning_with_Pytorch/Module-3-Shallow_Neural_Networks/4-NN_for_XOR_Data_Lab.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "05-deep-learning-with-pytorch/module-3-shallow-neural-networks/single-hidden-layer-nn-for-mnist",
@@ -1790,9 +1790,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-3-shallow-neural-networks",
     "sourcePath": "05-Deep_Learning_with_Pytorch/Module-3-Shallow_Neural_Networks/5-Single_Hidden_Layer_NN_for_MNIST.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "05-deep-learning-with-pytorch/module-3-shallow-neural-networks/activation-functinos",
@@ -1801,9 +1801,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-3-shallow-neural-networks",
     "sourcePath": "05-Deep_Learning_with_Pytorch/Module-3-Shallow_Neural_Networks/6-Activation_Functinos.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "05-deep-learning-with-pytorch/module-3-shallow-neural-networks/nns-with-diff-activations",
@@ -1812,9 +1812,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-3-shallow-neural-networks",
     "sourcePath": "05-Deep_Learning_with_Pytorch/Module-3-Shallow_Neural_Networks/7-NNs_with_Diff_Activations.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "05-deep-learning-with-pytorch/module-4-deep-neural-networks/deep-nn-for-mnist",
@@ -1823,9 +1823,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-4-deep-neural-networks",
     "sourcePath": "05-Deep_Learning_with_Pytorch/Module-4-Deep_Neural_Networks/01-Deep_NN_for_MNIST.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "05-deep-learning-with-pytorch/module-4-deep-neural-networks/layers-with-module-list",
@@ -1834,9 +1834,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-4-deep-neural-networks",
     "sourcePath": "05-Deep_Learning_with_Pytorch/Module-4-Deep_Neural_Networks/02-Layers_with_ModuleList.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "05-deep-learning-with-pytorch/module-4-deep-neural-networks/layers-with-module-list-lab",
@@ -1845,9 +1845,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-4-deep-neural-networks",
     "sourcePath": "05-Deep_Learning_with_Pytorch/Module-4-Deep_Neural_Networks/03-Layers_with_ModuleList_Lab.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "05-deep-learning-with-pytorch/module-4-deep-neural-networks/dropout",
@@ -1856,9 +1856,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-4-deep-neural-networks",
     "sourcePath": "05-Deep_Learning_with_Pytorch/Module-4-Deep_Neural_Networks/04-Dropout.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "05-deep-learning-with-pytorch/module-4-deep-neural-networks/dropout-classification-lab",
@@ -1867,9 +1867,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-4-deep-neural-networks",
     "sourcePath": "05-Deep_Learning_with_Pytorch/Module-4-Deep_Neural_Networks/05-Dropout_Classification_Lab.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "05-deep-learning-with-pytorch/module-4-deep-neural-networks/dropout-regressoin-lab",
@@ -1878,9 +1878,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-4-deep-neural-networks",
     "sourcePath": "05-Deep_Learning_with_Pytorch/Module-4-Deep_Neural_Networks/06-Dropout_Regressoin_Lab.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "05-deep-learning-with-pytorch/module-4-deep-neural-networks/weight-initialization",
@@ -1889,9 +1889,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-4-deep-neural-networks",
     "sourcePath": "05-Deep_Learning_with_Pytorch/Module-4-Deep_Neural_Networks/07-Weight_Initialization.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "05-deep-learning-with-pytorch/module-4-deep-neural-networks/same-value-weight-init-lab",
@@ -1900,9 +1900,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-4-deep-neural-networks",
     "sourcePath": "05-Deep_Learning_with_Pytorch/Module-4-Deep_Neural_Networks/08-Same_Value_Weight_Init_Lab.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "05-deep-learning-with-pytorch/module-4-deep-neural-networks/unform-default-xavier-weight-init-lab",
@@ -1911,9 +1911,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-4-deep-neural-networks",
     "sourcePath": "05-Deep_Learning_with_Pytorch/Module-4-Deep_Neural_Networks/09-Unform_Default_Xavier_Weight_Init_Lab.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "05-deep-learning-with-pytorch/module-4-deep-neural-networks/he-weight-init-lab",
@@ -1922,9 +1922,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-4-deep-neural-networks",
     "sourcePath": "05-Deep_Learning_with_Pytorch/Module-4-Deep_Neural_Networks/10-He_Weight_Init_Lab.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "05-deep-learning-with-pytorch/module-4-deep-neural-networks/gradient-desc-with-momentum",
@@ -1933,9 +1933,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-4-deep-neural-networks",
     "sourcePath": "05-Deep_Learning_with_Pytorch/Module-4-Deep_Neural_Networks/11-Gradient_Desc_with_Momentum.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "05-deep-learning-with-pytorch/module-4-deep-neural-networks/momentum-with-polynomials",
@@ -1944,9 +1944,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-4-deep-neural-networks",
     "sourcePath": "05-Deep_Learning_with_Pytorch/Module-4-Deep_Neural_Networks/12-Momentum_with_Polynomials.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "05-deep-learning-with-pytorch/module-4-deep-neural-networks/nn-with-momentum",
@@ -1955,9 +1955,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-4-deep-neural-networks",
     "sourcePath": "05-Deep_Learning_with_Pytorch/Module-4-Deep_Neural_Networks/13-NN_with_Momentum.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "05-deep-learning-with-pytorch/module-4-deep-neural-networks/batch-normalization",
@@ -1966,9 +1966,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-4-deep-neural-networks",
     "sourcePath": "05-Deep_Learning_with_Pytorch/Module-4-Deep_Neural_Networks/14-Batch_Normalization.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "05-deep-learning-with-pytorch/module-4-deep-neural-networks/batch-norm-for-mnist-lab",
@@ -1977,9 +1977,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-4-deep-neural-networks",
     "sourcePath": "05-Deep_Learning_with_Pytorch/Module-4-Deep_Neural_Networks/15-Batch_Norm_for_MNIST_Lab.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "05-deep-learning-with-pytorch/module-5-convolutional-neural-networks/convolution",
@@ -1988,9 +1988,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-5-convolutional-neural-networks",
     "sourcePath": "05-Deep_Learning_with_Pytorch/Module-5-Convolutional_Neural_Networks/01-Convolution.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "05-deep-learning-with-pytorch/module-5-convolutional-neural-networks/convolution-intro-lab",
@@ -1999,9 +1999,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-5-convolutional-neural-networks",
     "sourcePath": "05-Deep_Learning_with_Pytorch/Module-5-Convolutional_Neural_Networks/02-Convolution_Intro_Lab.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "05-deep-learning-with-pytorch/module-5-convolutional-neural-networks/activations-and-maxpool",
@@ -2010,9 +2010,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-5-convolutional-neural-networks",
     "sourcePath": "05-Deep_Learning_with_Pytorch/Module-5-Convolutional_Neural_Networks/03-Activations_and_Maxpool.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "05-deep-learning-with-pytorch/module-5-convolutional-neural-networks/activations-and-maxpool-lab",
@@ -2021,9 +2021,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-5-convolutional-neural-networks",
     "sourcePath": "05-Deep_Learning_with_Pytorch/Module-5-Convolutional_Neural_Networks/04-Activations_and_Maxpool_Lab.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "05-deep-learning-with-pytorch/module-5-convolutional-neural-networks/multiple-channel-convs",
@@ -2032,9 +2032,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-5-convolutional-neural-networks",
     "sourcePath": "05-Deep_Learning_with_Pytorch/Module-5-Convolutional_Neural_Networks/05-Multiple_Channel_Convs.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "05-deep-learning-with-pytorch/module-5-convolutional-neural-networks/multiple-channels-lab",
@@ -2043,9 +2043,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-5-convolutional-neural-networks",
     "sourcePath": "05-Deep_Learning_with_Pytorch/Module-5-Convolutional_Neural_Networks/06-Multiple_Channels_Lab.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "05-deep-learning-with-pytorch/module-5-convolutional-neural-networks/cnns",
@@ -2054,9 +2054,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-5-convolutional-neural-networks",
     "sourcePath": "05-Deep_Learning_with_Pytorch/Module-5-Convolutional_Neural_Networks/07-CNNs.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "05-deep-learning-with-pytorch/module-5-convolutional-neural-networks/simple-cnn-lab",
@@ -2065,9 +2065,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-5-convolutional-neural-networks",
     "sourcePath": "05-Deep_Learning_with_Pytorch/Module-5-Convolutional_Neural_Networks/08-Simple_CNN_Lab.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "05-deep-learning-with-pytorch/module-5-convolutional-neural-networks/small-img-cnn-lab",
@@ -2076,9 +2076,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-5-convolutional-neural-networks",
     "sourcePath": "05-Deep_Learning_with_Pytorch/Module-5-Convolutional_Neural_Networks/09-Small_Img_CNN_Lab.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "05-deep-learning-with-pytorch/module-5-convolutional-neural-networks/cnn-with-batch-norm-lab",
@@ -2087,9 +2087,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-5-convolutional-neural-networks",
     "sourcePath": "05-Deep_Learning_with_Pytorch/Module-5-Convolutional_Neural_Networks/10-CNN_with_Batch_Norm_Lab.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "05-deep-learning-with-pytorch/module-5-convolutional-neural-networks/torch-vision-models",
@@ -2098,9 +2098,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-5-convolutional-neural-networks",
     "sourcePath": "05-Deep_Learning_with_Pytorch/Module-5-Convolutional_Neural_Networks/11-Torch_Vision_Models.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "05-deep-learning-with-pytorch/module-5-convolutional-neural-networks/gpus-with-pytorch",
@@ -2109,9 +2109,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-5-convolutional-neural-networks",
     "sourcePath": "05-Deep_Learning_with_Pytorch/Module-5-Convolutional_Neural_Networks/12-GPUs_with_Pytorch.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "05-deep-learning-with-pytorch/module-6-final-project/practice-project-cnn-for-anime-images",
@@ -2120,9 +2120,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-6-final-project",
     "sourcePath": "05-Deep_Learning_with_Pytorch/Module-6-Final_Project/1-Practice_Project_CNN_for_Anime_Images.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "05-deep-learning-with-pytorch/module-6-final-project/final-project-fashion-mnist",
@@ -2131,9 +2131,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-6-final-project",
     "sourcePath": "05-Deep_Learning_with_Pytorch/Module-6-Final_Project/2-Final_Project_Fashion_MNIST.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "06-ai-capstone-project-with-deep-learning/module-1-data-handling/data-loading-overview",
@@ -2142,9 +2142,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-data-handling",
     "sourcePath": "06-AI_Capstone_Project_with_Deep_Learning/Module-1-Data_Handling/1-Data_Loading_Overview.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "06-ai-capstone-project-with-deep-learning/module-1-data-handling/bulk-vs-lazy-loading",
@@ -2153,9 +2153,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-data-handling",
     "sourcePath": "06-AI_Capstone_Project_with_Deep_Learning/Module-1-Data_Handling/2-Bulk_vs_Lazy_Loading.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "06-ai-capstone-project-with-deep-learning/module-1-data-handling/data-loading-and-augmentation-using-keras",
@@ -2164,9 +2164,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-data-handling",
     "sourcePath": "06-AI_Capstone_Project_with_Deep_Learning/Module-1-Data_Handling/3-Data_Loading_and_Augmentation_Using_Keras.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "06-ai-capstone-project-with-deep-learning/module-1-data-handling/data-loading-and-augmentation-using-py-torch",
@@ -2175,9 +2175,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-data-handling",
     "sourcePath": "06-AI_Capstone_Project_with_Deep_Learning/Module-1-Data_Handling/4-Data_Loading_and_Augmentation_Using_PyTorch.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "06-ai-capstone-project-with-deep-learning/module-2-cnn-model-development/keras-based-classifier",
@@ -2186,9 +2186,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-cnn-model-development",
     "sourcePath": "06-AI_Capstone_Project_with_Deep_Learning/Module-2-CNN_Model_Development/1-Keras_Based_Classifier.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "06-ai-capstone-project-with-deep-learning/module-2-cnn-model-development/py-torch-based-classifier",
@@ -2197,9 +2197,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-cnn-model-development",
     "sourcePath": "06-AI_Capstone_Project_with_Deep_Learning/Module-2-CNN_Model_Development/2-PyTorch_Based_Classifier.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "06-ai-capstone-project-with-deep-learning/module-2-cnn-model-development/comparative-analysis-of-keras-and-py-torch-models",
@@ -2208,9 +2208,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-cnn-model-development",
     "sourcePath": "06-AI_Capstone_Project_with_Deep_Learning/Module-2-CNN_Model_Development/3-Comparative_Analysis_of_Keras_and_PyTorch_Models.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "06-ai-capstone-project-with-deep-learning/module-3-cnn-vision-transformer-integration/vision-transformers-in-keras",
@@ -2219,9 +2219,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-3-cnn-vision-transformer-integration",
     "sourcePath": "06-AI_Capstone_Project_with_Deep_Learning/Module-3-CNN_Vision_Transformer_Integration/1-Vision_Transformers_in_Keras.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "06-ai-capstone-project-with-deep-learning/module-3-cnn-vision-transformer-integration/vision-transformers-in-py-torch",
@@ -2230,9 +2230,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-3-cnn-vision-transformer-integration",
     "sourcePath": "06-AI_Capstone_Project_with_Deep_Learning/Module-3-CNN_Vision_Transformer_Integration/2-Vision_Transformers_in_PyTorch.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "06-ai-capstone-project-with-deep-learning/module-3-cnn-vision-transformer-integration/classification-cnn-vi-t-integration-evaluation",
@@ -2241,9 +2241,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-3-cnn-vision-transformer-integration",
     "sourcePath": "06-AI_Capstone_Project_with_Deep_Learning/Module-3-CNN_Vision_Transformer_Integration/3-Classification_CNN-ViT_Integration_Evaluation.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "07-gen-ai-and-llms-architecture-and-data-preparation/module-1-generative-ai-architecture/significance-of-gen-ai",
@@ -2252,9 +2252,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-generative-ai-architecture",
     "sourcePath": "07-Gen_AI_and_LLMS_Architecture_and_Data_Preparation/Module-1-Generative_AI_Architecture/1-Significance_of_Gen_AI.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "07-gen-ai-and-llms-architecture-and-data-preparation/module-1-generative-ai-architecture/gen-ai-architectures-and-models",
@@ -2263,9 +2263,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-generative-ai-architecture",
     "sourcePath": "07-Gen_AI_and_LLMS_Architecture_and_Data_Preparation/Module-1-Generative_AI_Architecture/2-Gen_AI_Architectures_and_Models.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "07-gen-ai-and-llms-architecture-and-data-preparation/module-1-generative-ai-architecture/gen-ai-for-nlp",
@@ -2274,9 +2274,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-generative-ai-architecture",
     "sourcePath": "07-Gen_AI_and_LLMS_Architecture_and_Data_Preparation/Module-1-Generative_AI_Architecture/3-Gen_AI_for_NLP.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "07-gen-ai-and-llms-architecture-and-data-preparation/module-1-generative-ai-architecture/basics-of-ai-hallucinations",
@@ -2285,9 +2285,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-generative-ai-architecture",
     "sourcePath": "07-Gen_AI_and_LLMS_Architecture_and_Data_Preparation/Module-1-Generative_AI_Architecture/4-Basics_of_AI_Hallucinations.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "07-gen-ai-and-llms-architecture-and-data-preparation/module-1-generative-ai-architecture/overview-of-libraries-and-tools",
@@ -2296,9 +2296,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-generative-ai-architecture",
     "sourcePath": "07-Gen_AI_and_LLMS_Architecture_and_Data_Preparation/Module-1-Generative_AI_Architecture/5-Overview_of_Libraries_and_Tools.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "07-gen-ai-and-llms-architecture-and-data-preparation/module-1-generative-ai-architecture/exploring-generative-ai-libraries",
@@ -2307,9 +2307,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-generative-ai-architecture",
     "sourcePath": "07-Gen_AI_and_LLMS_Architecture_and_Data_Preparation/Module-1-Generative_AI_Architecture/6-Exploring_Generative_AI_Libraries.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "07-gen-ai-and-llms-architecture-and-data-preparation/module-2-data-prep-for-llms/tokenization",
@@ -2318,9 +2318,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-data-prep-for-llms",
     "sourcePath": "07-Gen_AI_and_LLMS_Architecture_and_Data_Preparation/Module-2-Data_Prep_for_LLMs/1-Tokenization.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "07-gen-ai-and-llms-architecture-and-data-preparation/module-2-data-prep-for-llms/implementing-tokenization-lab",
@@ -2329,9 +2329,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-data-prep-for-llms",
     "sourcePath": "07-Gen_AI_and_LLMS_Architecture_and_Data_Preparation/Module-2-Data_Prep_for_LLMs/2-Implementing_Tokenization_Lab.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "07-gen-ai-and-llms-architecture-and-data-preparation/module-2-data-prep-for-llms/overview-of-data-loaders",
@@ -2340,9 +2340,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-data-prep-for-llms",
     "sourcePath": "07-Gen_AI_and_LLMS_Architecture_and_Data_Preparation/Module-2-Data_Prep_for_LLMs/3-Overview_of_Data_Loaders.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "07-gen-ai-and-llms-architecture-and-data-preparation/module-2-data-prep-for-llms/data-quality-and-diversity",
@@ -2351,9 +2351,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-data-prep-for-llms",
     "sourcePath": "07-Gen_AI_and_LLMS_Architecture_and_Data_Preparation/Module-2-Data_Prep_for_LLMs/4-Data_Quality_and_Diversity.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "07-gen-ai-and-llms-architecture-and-data-preparation/module-2-data-prep-for-llms/creating-nlp-data-loader",
@@ -2362,9 +2362,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-data-prep-for-llms",
     "sourcePath": "07-Gen_AI_and_LLMS_Architecture_and_Data_Preparation/Module-2-Data_Prep_for_LLMs/5-Creating_NLP_Data_Loader.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "08-gen-ai-foundational-models-for-nlp/module-1-fundamentals-of-language-understanding/converting-words-to-features",
@@ -2373,9 +2373,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-fundamentals-of-language-understanding",
     "sourcePath": "08-Gen_AI_Foundational_Models_for_NLP/Module-1-Fundamentals_of_Language_Understanding/01-Converting_Words_to_Features.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "08-gen-ai-foundational-models-for-nlp/module-1-fundamentals-of-language-understanding/document-categorization-prediction-with-torchtext",
@@ -2384,9 +2384,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-fundamentals-of-language-understanding",
     "sourcePath": "08-Gen_AI_Foundational_Models_for_NLP/Module-1-Fundamentals_of_Language_Understanding/02-Document_Categorization_Prediction_with_Torchtext.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "08-gen-ai-foundational-models-for-nlp/module-1-fundamentals-of-language-understanding/document-categorization-training",
@@ -2395,9 +2395,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-fundamentals-of-language-understanding",
     "sourcePath": "08-Gen_AI_Foundational_Models_for_NLP/Module-1-Fundamentals_of_Language_Understanding/03-Document_Categorization_Training.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "08-gen-ai-foundational-models-for-nlp/module-1-fundamentals-of-language-understanding/training-the-model-in-py-torch",
@@ -2406,9 +2406,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-fundamentals-of-language-understanding",
     "sourcePath": "08-Gen_AI_Foundational_Models_for_NLP/Module-1-Fundamentals_of_Language_Understanding/04-Training_the_Model_in_PyTorch.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "08-gen-ai-foundational-models-for-nlp/module-1-fundamentals-of-language-understanding/classifying-documents-lab",
@@ -2417,9 +2417,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-fundamentals-of-language-understanding",
     "sourcePath": "08-Gen_AI_Foundational_Models_for_NLP/Module-1-Fundamentals_of_Language_Understanding/05-Classifying_Documents_Lab.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "08-gen-ai-foundational-models-for-nlp/module-1-fundamentals-of-language-understanding/language-modeling-with-n-grams",
@@ -2428,9 +2428,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-fundamentals-of-language-understanding",
     "sourcePath": "08-Gen_AI_Foundational_Models_for_NLP/Module-1-Fundamentals_of_Language_Understanding/06-Language_Modeling_with_N_Grams.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "08-gen-ai-foundational-models-for-nlp/module-1-fundamentals-of-language-understanding/n-grams-as-nns-with-pytorch",
@@ -2439,9 +2439,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-fundamentals-of-language-understanding",
     "sourcePath": "08-Gen_AI_Foundational_Models_for_NLP/Module-1-Fundamentals_of_Language_Understanding/07-N_Grams_as_NNs_with_Pytorch.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "08-gen-ai-foundational-models-for-nlp/module-1-fundamentals-of-language-understanding/language-modelling-with-n-gram",
@@ -2450,9 +2450,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-fundamentals-of-language-understanding",
     "sourcePath": "08-Gen_AI_Foundational_Models_for_NLP/Module-1-Fundamentals_of_Language_Understanding/08-Language_Modelling_with_N_Gram.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "08-gen-ai-foundational-models-for-nlp/module-2-word2-vec-and-sequence-to-sequence-models/intro-to-word2-vec-and-cbow-models",
@@ -2461,9 +2461,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-word2-vec-and-sequence-to-sequence-models",
     "sourcePath": "08-Gen_AI_Foundational_Models_for_NLP/Module-2-Word2Vec_and_Sequence_to_Sequence_Models/01-Intro_to_Word2Vec_and_CBOW_Models.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "08-gen-ai-foundational-models-for-nlp/module-2-word2-vec-and-sequence-to-sequence-models/skip-gram-and-pretrained-models",
@@ -2472,9 +2472,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-word2-vec-and-sequence-to-sequence-models",
     "sourcePath": "08-Gen_AI_Foundational_Models_for_NLP/Module-2-Word2Vec_and_Sequence_to_Sequence_Models/02-Skip_Gram_and_Pretrained_Models.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "08-gen-ai-foundational-models-for-nlp/module-2-word2-vec-and-sequence-to-sequence-models/word2-vec-integration-lab-p1",
@@ -2483,9 +2483,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-word2-vec-and-sequence-to-sequence-models",
     "sourcePath": "08-Gen_AI_Foundational_Models_for_NLP/Module-2-Word2Vec_and_Sequence_to_Sequence_Models/03-Word2Vec_Integration_Lab_P1.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "08-gen-ai-foundational-models-for-nlp/module-2-word2-vec-and-sequence-to-sequence-models/word2-vec-integration-lab-p2",
@@ -2494,9 +2494,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-word2-vec-and-sequence-to-sequence-models",
     "sourcePath": "08-Gen_AI_Foundational_Models_for_NLP/Module-2-Word2Vec_and_Sequence_to_Sequence_Models/04-Word2Vec_Integration_Lab_P2.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "08-gen-ai-foundational-models-for-nlp/module-2-word2-vec-and-sequence-to-sequence-models/seq-to-seq-models-and-rnns",
@@ -2505,9 +2505,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-word2-vec-and-sequence-to-sequence-models",
     "sourcePath": "08-Gen_AI_Foundational_Models_for_NLP/Module-2-Word2Vec_and_Sequence_to_Sequence_Models/05-Seq_to_Seq_Models_and_RNNs.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "08-gen-ai-foundational-models-for-nlp/module-2-word2-vec-and-sequence-to-sequence-models/encoder-decoder-rnn-model",
@@ -2516,9 +2516,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-word2-vec-and-sequence-to-sequence-models",
     "sourcePath": "08-Gen_AI_Foundational_Models_for_NLP/Module-2-Word2Vec_and_Sequence_to_Sequence_Models/06-Encoder_Decoder_RNN_Model.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "08-gen-ai-foundational-models-for-nlp/module-2-word2-vec-and-sequence-to-sequence-models/encoder-decoder-rnn-model-translation",
@@ -2527,9 +2527,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-word2-vec-and-sequence-to-sequence-models",
     "sourcePath": "08-Gen_AI_Foundational_Models_for_NLP/Module-2-Word2Vec_and_Sequence_to_Sequence_Models/07-Encoder_Decoder_RNN_Model_Translation.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "08-gen-ai-foundational-models-for-nlp/module-2-word2-vec-and-sequence-to-sequence-models/developing-seq2-seq-model",
@@ -2538,9 +2538,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-word2-vec-and-sequence-to-sequence-models",
     "sourcePath": "08-Gen_AI_Foundational_Models_for_NLP/Module-2-Word2Vec_and_Sequence_to_Sequence_Models/08-Developing_Seq2Seq_Model.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "08-gen-ai-foundational-models-for-nlp/module-2-word2-vec-and-sequence-to-sequence-models/ethical-implications",
@@ -2549,9 +2549,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-word2-vec-and-sequence-to-sequence-models",
     "sourcePath": "08-Gen_AI_Foundational_Models_for_NLP/Module-2-Word2Vec_and_Sequence_to_Sequence_Models/09-Ethical_Implications.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "08-gen-ai-foundational-models-for-nlp/module-2-word2-vec-and-sequence-to-sequence-models/text-gen-evaluation-metrics",
@@ -2560,9 +2560,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-word2-vec-and-sequence-to-sequence-models",
     "sourcePath": "08-Gen_AI_Foundational_Models_for_NLP/Module-2-Word2Vec_and_Sequence_to_Sequence_Models/10-Text_Gen_Evaluation_Metrics.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "09-gen-ai-language-modeling-with-transformers/module-1-fundamental-concepts-of-transformer-architecture/positional-encoding",
@@ -2571,9 +2571,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-fundamental-concepts-of-transformer-architecture",
     "sourcePath": "09-Gen_AI_Language_Modeling_with_Transformers/Module-1-Fundamental_Concepts_of_Transformer_Architecture/1-Positional_Encoding.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "09-gen-ai-language-modeling-with-transformers/module-1-fundamental-concepts-of-transformer-architecture/attention-mechanism",
@@ -2582,9 +2582,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-fundamental-concepts-of-transformer-architecture",
     "sourcePath": "09-Gen_AI_Language_Modeling_with_Transformers/Module-1-Fundamental_Concepts_of_Transformer_Architecture/2-Attention_Mechanism.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "09-gen-ai-language-modeling-with-transformers/module-1-fundamental-concepts-of-transformer-architecture/self-attention",
@@ -2593,9 +2593,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-fundamental-concepts-of-transformer-architecture",
     "sourcePath": "09-Gen_AI_Language_Modeling_with_Transformers/Module-1-Fundamental_Concepts_of_Transformer_Architecture/3-Self_Attention.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "09-gen-ai-language-modeling-with-transformers/module-1-fundamental-concepts-of-transformer-architecture/attention-in-transformers",
@@ -2604,9 +2604,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-fundamental-concepts-of-transformer-architecture",
     "sourcePath": "09-Gen_AI_Language_Modeling_with_Transformers/Module-1-Fundamental_Concepts_of_Transformer_Architecture/4-Attention_in_Transformers.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "09-gen-ai-language-modeling-with-transformers/module-1-fundamental-concepts-of-transformer-architecture/attention-and-positional-encoding",
@@ -2615,9 +2615,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-fundamental-concepts-of-transformer-architecture",
     "sourcePath": "09-Gen_AI_Language_Modeling_with_Transformers/Module-1-Fundamental_Concepts_of_Transformer_Architecture/5-Attention_and_Positional_Encoding.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "09-gen-ai-language-modeling-with-transformers/module-1-fundamental-concepts-of-transformer-architecture/classification-transformer-encoder",
@@ -2626,9 +2626,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-fundamental-concepts-of-transformer-architecture",
     "sourcePath": "09-Gen_AI_Language_Modeling_with_Transformers/Module-1-Fundamental_Concepts_of_Transformer_Architecture/6-Classification_Transformer_Encoder.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "09-gen-ai-language-modeling-with-transformers/module-1-fundamental-concepts-of-transformer-architecture/7-classification-transformers-lab",
@@ -2637,9 +2637,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-fundamental-concepts-of-transformer-architecture",
     "sourcePath": "09-Gen_AI_Language_Modeling_with_Transformers/Module-1-Fundamental_Concepts_of_Transformer_Architecture/7-Classification_Transformers_Lab.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "09-gen-ai-language-modeling-with-transformers/module-1-fundamental-concepts-of-transformer-architecture/optimization-techniques-for-efficient-training",
@@ -2648,9 +2648,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-fundamental-concepts-of-transformer-architecture",
     "sourcePath": "09-Gen_AI_Language_Modeling_with_Transformers/Module-1-Fundamental_Concepts_of_Transformer_Architecture/8-Optimization_Techniques_for_Efficient_Training.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "09-gen-ai-language-modeling-with-transformers/module-1-fundamental-concepts-of-transformer-architecture/9-classification-transformers-lab",
@@ -2659,9 +2659,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-fundamental-concepts-of-transformer-architecture",
     "sourcePath": "09-Gen_AI_Language_Modeling_with_Transformers/Module-1-Fundamental_Concepts_of_Transformer_Architecture/9-Classification_Transformers_Lab.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "09-gen-ai-language-modeling-with-transformers/module-2-advanced-concepts-of-transformer-architecture/language-modeling-with-decoders-and-gpt",
@@ -2670,9 +2670,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-advanced-concepts-of-transformer-architecture",
     "sourcePath": "09-Gen_AI_Language_Modeling_with_Transformers/Module-2-Advanced_Concepts_of_Transformer_Architecture/01-Language_Modeling_with_Decoders_and_GPT.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "09-gen-ai-language-modeling-with-transformers/module-2-advanced-concepts-of-transformer-architecture/training-decoder-models",
@@ -2681,9 +2681,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-advanced-concepts-of-transformer-architecture",
     "sourcePath": "09-Gen_AI_Language_Modeling_with_Transformers/Module-2-Advanced_Concepts_of_Transformer_Architecture/02-Training_Decoder_Models.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "09-gen-ai-language-modeling-with-transformers/module-2-advanced-concepts-of-transformer-architecture/decoder-pytorch-implementation-causal-lm",
@@ -2692,9 +2692,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-advanced-concepts-of-transformer-architecture",
     "sourcePath": "09-Gen_AI_Language_Modeling_with_Transformers/Module-2-Advanced_Concepts_of_Transformer_Architecture/03-Decoder_Pytorch_Implementation_Causal_LM.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "09-gen-ai-language-modeling-with-transformers/module-2-advanced-concepts-of-transformer-architecture/decoder-pytorch-implementation-training-and-inference",
@@ -2703,9 +2703,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-advanced-concepts-of-transformer-architecture",
     "sourcePath": "09-Gen_AI_Language_Modeling_with_Transformers/Module-2-Advanced_Concepts_of_Transformer_Architecture/04-Decoder_Pytorch_Implementation_Training_and_Inference.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "09-gen-ai-language-modeling-with-transformers/module-2-advanced-concepts-of-transformer-architecture/decoder-causal-lm-gpt-like-models",
@@ -2714,9 +2714,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-advanced-concepts-of-transformer-architecture",
     "sourcePath": "09-Gen_AI_Language_Modeling_with_Transformers/Module-2-Advanced_Concepts_of_Transformer_Architecture/05-Decoder_Causal_LM_GPT_Like_Models.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "09-gen-ai-language-modeling-with-transformers/module-2-advanced-concepts-of-transformer-architecture/mlm-pretrainnig-bert-encoder-model",
@@ -2725,9 +2725,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-advanced-concepts-of-transformer-architecture",
     "sourcePath": "09-Gen_AI_Language_Modeling_with_Transformers/Module-2-Advanced_Concepts_of_Transformer_Architecture/06-MLM_Pretrainnig_BERT_Encoder_Model.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "09-gen-ai-language-modeling-with-transformers/module-2-advanced-concepts-of-transformer-architecture/nsp-pretraining-bert",
@@ -2736,9 +2736,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-advanced-concepts-of-transformer-architecture",
     "sourcePath": "09-Gen_AI_Language_Modeling_with_Transformers/Module-2-Advanced_Concepts_of_Transformer_Architecture/07-NSP_Pretraining_BERT.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "09-gen-ai-language-modeling-with-transformers/module-2-advanced-concepts-of-transformer-architecture/pretraining-encoder-model-baby-bert",
@@ -2747,9 +2747,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-advanced-concepts-of-transformer-architecture",
     "sourcePath": "09-Gen_AI_Language_Modeling_with_Transformers/Module-2-Advanced_Concepts_of_Transformer_Architecture/08-Pretraining_Encoder Model_Baby_BERT.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "09-gen-ai-language-modeling-with-transformers/module-2-advanced-concepts-of-transformer-architecture/data-prep-for-bert",
@@ -2758,9 +2758,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-advanced-concepts-of-transformer-architecture",
     "sourcePath": "09-Gen_AI_Language_Modeling_with_Transformers/Module-2-Advanced_Concepts_of_Transformer_Architecture/09-Data_Prep_for_BERT.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "09-gen-ai-language-modeling-with-transformers/module-2-advanced-concepts-of-transformer-architecture/transfomer-arch-for-lang-translation",
@@ -2769,9 +2769,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-advanced-concepts-of-transformer-architecture",
     "sourcePath": "09-Gen_AI_Language_Modeling_with_Transformers/Module-2-Advanced_Concepts_of_Transformer_Architecture/10-Transfomer_Arch_for_Lang_Translation.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "09-gen-ai-language-modeling-with-transformers/module-2-advanced-concepts-of-transformer-architecture/transformers-for-translation",
@@ -2780,9 +2780,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-advanced-concepts-of-transformer-architecture",
     "sourcePath": "09-Gen_AI_Language_Modeling_with_Transformers/Module-2-Advanced_Concepts_of_Transformer_Architecture/11-Transformers_for_Translation.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "10-gen-ai-engineering-and-fine-tuning-transformers/module-1-transformers-and-fine-tuning/hugging-face-vs-py-torch",
@@ -2791,9 +2791,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-transformers-and-fine-tuning",
     "sourcePath": "10-Gen_AI_Engineering_and_Fine_Tuning_Transformers/Module-1-Transformers_and_Fine_Tuning/1-Hugging_Face_vs_PyTorch.md",
     "sourceFormat": "md",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "10-gen-ai-engineering-and-fine-tuning-transformers/module-1-transformers-and-fine-tuning/loading-and-inference-w-huggingface-models",
@@ -2802,9 +2802,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-transformers-and-fine-tuning",
     "sourcePath": "10-Gen_AI_Engineering_and_Fine_Tuning_Transformers/Module-1-Transformers_and_Fine_Tuning/2-Loading_and_Inference_w_Huggingface_Models.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "10-gen-ai-engineering-and-fine-tuning-transformers/module-1-transformers-and-fine-tuning/using-pretrained-transformers-and-fine-tuning",
@@ -2813,9 +2813,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-transformers-and-fine-tuning",
     "sourcePath": "10-Gen_AI_Engineering_and_Fine_Tuning_Transformers/Module-1-Transformers_and_Fine_Tuning/3-Using_Pretrained_Transformers_and_Fine_Tuning.md",
     "sourceFormat": "md",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "10-gen-ai-engineering-and-fine-tuning-transformers/module-1-transformers-and-fine-tuning/optional-pretraining-llms-w-hugging-face",
@@ -2824,9 +2824,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-transformers-and-fine-tuning",
     "sourcePath": "10-Gen_AI_Engineering_and_Fine_Tuning_Transformers/Module-1-Transformers_and_Fine_Tuning/4-Optional_Pretraining_LLMs_w_Hugging_Face.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "10-gen-ai-engineering-and-fine-tuning-transformers/module-1-transformers-and-fine-tuning/fine-tuning-with-pytorch",
@@ -2835,9 +2835,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-transformers-and-fine-tuning",
     "sourcePath": "10-Gen_AI_Engineering_and_Fine_Tuning_Transformers/Module-1-Transformers_and_Fine_Tuning/5-Fine_Tuning_with_Pytorch.md",
     "sourceFormat": "md",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "10-gen-ai-engineering-and-fine-tuning-transformers/module-1-transformers-and-fine-tuning/fine-tuning-with-huggingface",
@@ -2846,9 +2846,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-transformers-and-fine-tuning",
     "sourcePath": "10-Gen_AI_Engineering_and_Fine_Tuning_Transformers/Module-1-Transformers_and_Fine_Tuning/6-Fine_tuning_with_Huggingface.md",
     "sourceFormat": "md",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "10-gen-ai-engineering-and-fine-tuning-transformers/module-1-transformers-and-fine-tuning/pretraining-and-fine-tuning-with-py-torch",
@@ -2857,9 +2857,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-transformers-and-fine-tuning",
     "sourcePath": "10-Gen_AI_Engineering_and_Fine_Tuning_Transformers/Module-1-Transformers_and_Fine_Tuning/7-Pretraining_and_Fine_Tuning_with_PyTorch.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "10-gen-ai-engineering-and-fine-tuning-transformers/module-1-transformers-and-fine-tuning/fine-tuning-transformers-w-py-torch-hugging-face",
@@ -2868,9 +2868,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-transformers-and-fine-tuning",
     "sourcePath": "10-Gen_AI_Engineering_and_Fine_Tuning_Transformers/Module-1-Transformers_and_Fine_Tuning/8-Fine_Tuning_Transformers w__PyTorch_HuggingFace.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "10-gen-ai-engineering-and-fine-tuning-transformers/module-2-parameter-efficient-fine-tuning-peft/intro-to-peft",
@@ -2879,9 +2879,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-parameter-efficient-fine-tuning-peft",
     "sourcePath": "10-Gen_AI_Engineering_and_Fine_Tuning_Transformers/Module-2-Parameter_Efficient_Fine-Tuning_PEFT/1-Intro_to_PEFT.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "10-gen-ai-engineering-and-fine-tuning-transformers/module-2-parameter-efficient-fine-tuning-peft/adapters-in-py-torch",
@@ -2890,9 +2890,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-parameter-efficient-fine-tuning-peft",
     "sourcePath": "10-Gen_AI_Engineering_and_Fine_Tuning_Transformers/Module-2-Parameter_Efficient_Fine-Tuning_PEFT/2-Adapters_in_PyTorch.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "10-gen-ai-engineering-and-fine-tuning-transformers/module-2-parameter-efficient-fine-tuning-peft/low-rank-adaptation-lo-ra",
@@ -2901,9 +2901,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-parameter-efficient-fine-tuning-peft",
     "sourcePath": "10-Gen_AI_Engineering_and_Fine_Tuning_Transformers/Module-2-Parameter_Efficient_Fine-Tuning_PEFT/3-Low_Rank_Adaptation_LoRA.md",
     "sourceFormat": "md",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "10-gen-ai-engineering-and-fine-tuning-transformers/module-2-parameter-efficient-fine-tuning-peft/lo-ra-with-pytorch",
@@ -2912,9 +2912,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-parameter-efficient-fine-tuning-peft",
     "sourcePath": "10-Gen_AI_Engineering_and_Fine_Tuning_Transformers/Module-2-Parameter_Efficient_Fine-Tuning_PEFT/4-LoRA_with_Pytorch.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "10-gen-ai-engineering-and-fine-tuning-transformers/module-2-parameter-efficient-fine-tuning-peft/ethical-considerations",
@@ -2923,9 +2923,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-parameter-efficient-fine-tuning-peft",
     "sourcePath": "10-Gen_AI_Engineering_and_Fine_Tuning_Transformers/Module-2-Parameter_Efficient_Fine-Tuning_PEFT/7-Ethical_Considerations.md",
     "sourceFormat": "md",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "11-gen-ai-advanced-fine-tuning-for-llms/module-1-diff-approaches-to-fine-tuning/instruction-tuning-basics",
@@ -2934,9 +2934,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-diff-approaches-to-fine-tuning",
     "sourcePath": "11-Gen_AI_Advanced_Fine_Tuning_for_LLMs/Module-1-Diff_Approaches_to_Fine_Tuning/1-Instruction_Tuning_Basics.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "11-gen-ai-advanced-fine-tuning-for-llms/module-1-diff-approaches-to-fine-tuning/instruction-fine-tuning",
@@ -2945,9 +2945,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-diff-approaches-to-fine-tuning",
     "sourcePath": "11-Gen_AI_Advanced_Fine_Tuning_for_LLMs/Module-1-Diff_Approaches_to_Fine_Tuning/3-Instruction_Fine_Tuning.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "11-gen-ai-advanced-fine-tuning-for-llms/module-1-diff-approaches-to-fine-tuning/instruction-tuning-llms-best-practices",
@@ -2956,9 +2956,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-diff-approaches-to-fine-tuning",
     "sourcePath": "11-Gen_AI_Advanced_Fine_Tuning_for_LLMs/Module-1-Diff_Approaches_to_Fine_Tuning/4-Instruction_Tuning_LLMs_Best_Practices.md",
     "sourceFormat": "md",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "11-gen-ai-advanced-fine-tuning-for-llms/module-1-diff-approaches-to-fine-tuning/response-eval-reward-modeling",
@@ -2967,9 +2967,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-diff-approaches-to-fine-tuning",
     "sourcePath": "11-Gen_AI_Advanced_Fine_Tuning_for_LLMs/Module-1-Diff_Approaches_to_Fine_Tuning/5-Response_Eval_Reward_Modeling.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "11-gen-ai-advanced-fine-tuning-for-llms/module-1-diff-approaches-to-fine-tuning/reward-model-training",
@@ -2978,9 +2978,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-diff-approaches-to-fine-tuning",
     "sourcePath": "11-Gen_AI_Advanced_Fine_Tuning_for_LLMs/Module-1-Diff_Approaches_to_Fine_Tuning/6-Reward_Model_Training.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "11-gen-ai-advanced-fine-tuning-for-llms/module-1-diff-approaches-to-fine-tuning/reward-modeling",
@@ -2989,9 +2989,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-diff-approaches-to-fine-tuning",
     "sourcePath": "11-Gen_AI_Advanced_Fine_Tuning_for_LLMs/Module-1-Diff_Approaches_to_Fine_Tuning/8-Reward_Modeling.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "11-gen-ai-advanced-fine-tuning-for-llms/module-2-fine-tuning-causal-llms-w-human-feedback-and-direct-preference/llms-as-distributions",
@@ -3000,9 +3000,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-fine-tuning-causal-llms-w-human-feedback-and-direct-preference",
     "sourcePath": "11-Gen_AI_Advanced_Fine_Tuning_for_LLMs/Module-2-Fine_Tuning_Causal_LLMs_w_Human_Feedback_and_Direct_Preference/01-LLMs_as_Distributions.md",
     "sourceFormat": "md",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "11-gen-ai-advanced-fine-tuning-for-llms/module-2-fine-tuning-causal-llms-w-human-feedback-and-direct-preference/distributions-to-policies",
@@ -3011,9 +3011,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-fine-tuning-causal-llms-w-human-feedback-and-direct-preference",
     "sourcePath": "11-Gen_AI_Advanced_Fine_Tuning_for_LLMs/Module-2-Fine_Tuning_Causal_LLMs_w_Human_Feedback_and_Direct_Preference/02-Distributions_to_Policies.md",
     "sourceFormat": "md",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "11-gen-ai-advanced-fine-tuning-for-llms/module-2-fine-tuning-causal-llms-w-human-feedback-and-direct-preference/rl-from-human-feedback-rlhf",
@@ -3022,9 +3022,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-fine-tuning-causal-llms-w-human-feedback-and-direct-preference",
     "sourcePath": "11-Gen_AI_Advanced_Fine_Tuning_for_LLMs/Module-2-Fine_Tuning_Causal_LLMs_w_Human_Feedback_and_Direct_Preference/03-RL_from_Human_Feedback_RLHF.md",
     "sourceFormat": "md",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "11-gen-ai-advanced-fine-tuning-for-llms/module-2-fine-tuning-causal-llms-w-human-feedback-and-direct-preference/proximal-policy-optimization",
@@ -3033,9 +3033,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-fine-tuning-causal-llms-w-human-feedback-and-direct-preference",
     "sourcePath": "11-Gen_AI_Advanced_Fine_Tuning_for_LLMs/Module-2-Fine_Tuning_Causal_LLMs_w_Human_Feedback_and_Direct_Preference/04-Proximal_Policy_Optimization.md",
     "sourceFormat": "md",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "11-gen-ai-advanced-fine-tuning-for-llms/module-2-fine-tuning-causal-llms-w-human-feedback-and-direct-preference/ppotrainer",
@@ -3044,9 +3044,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-fine-tuning-causal-llms-w-human-feedback-and-direct-preference",
     "sourcePath": "11-Gen_AI_Advanced_Fine_Tuning_for_LLMs/Module-2-Fine_Tuning_Causal_LLMs_w_Human_Feedback_and_Direct_Preference/05-PPOTrainer.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "11-gen-ai-advanced-fine-tuning-for-llms/module-2-fine-tuning-causal-llms-w-human-feedback-and-direct-preference/dpo-partition-function",
@@ -3055,9 +3055,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-fine-tuning-causal-llms-w-human-feedback-and-direct-preference",
     "sourcePath": "11-Gen_AI_Advanced_Fine_Tuning_for_LLMs/Module-2-Fine_Tuning_Causal_LLMs_w_Human_Feedback_and_Direct_Preference/06-DPO_Partition_Function.md",
     "sourceFormat": "md",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "11-gen-ai-advanced-fine-tuning-for-llms/module-2-fine-tuning-causal-llms-w-human-feedback-and-direct-preference/dpo-optimal-solution",
@@ -3066,9 +3066,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-fine-tuning-causal-llms-w-human-feedback-and-direct-preference",
     "sourcePath": "11-Gen_AI_Advanced_Fine_Tuning_for_LLMs/Module-2-Fine_Tuning_Causal_LLMs_w_Human_Feedback_and_Direct_Preference/07-DPO_Optimal_Solution.md",
     "sourceFormat": "md",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "11-gen-ai-advanced-fine-tuning-for-llms/module-2-fine-tuning-causal-llms-w-human-feedback-and-direct-preference/optimal-policy-to-dpo",
@@ -3077,9 +3077,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-fine-tuning-causal-llms-w-human-feedback-and-direct-preference",
     "sourcePath": "11-Gen_AI_Advanced_Fine_Tuning_for_LLMs/Module-2-Fine_Tuning_Causal_LLMs_w_Human_Feedback_and_Direct_Preference/08-Optimal_Policy_to_DPO.md",
     "sourceFormat": "md",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "11-gen-ai-advanced-fine-tuning-for-llms/module-2-fine-tuning-causal-llms-w-human-feedback-and-direct-preference/dpo-fine-tuning",
@@ -3088,9 +3088,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-fine-tuning-causal-llms-w-human-feedback-and-direct-preference",
     "sourcePath": "11-Gen_AI_Advanced_Fine_Tuning_for_LLMs/Module-2-Fine_Tuning_Causal_LLMs_w_Human_Feedback_and_Direct_Preference/09-DPO_Fine_Tuning.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "12-fundamentals-of-ai-agents-w-rag-and-lang-chain/module-1-rag-framework/rag",
@@ -3099,9 +3099,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-rag-framework",
     "sourcePath": "12-Fundamentals_of_AI_Agents_w_RAG_and_LangChain/Module-1-RAG_Framework/1-RAG.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "12-fundamentals-of-ai-agents-w-rag-and-lang-chain/module-1-rag-framework/rag-encoders-and-faiss",
@@ -3110,9 +3110,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-rag-framework",
     "sourcePath": "12-Fundamentals_of_AI_Agents_w_RAG_and_LangChain/Module-1-RAG_Framework/2-RAG_Encoders_and_FAISS.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "12-fundamentals-of-ai-agents-w-rag-and-lang-chain/module-1-rag-framework/rag-with-hugging-face",
@@ -3121,9 +3121,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-rag-framework",
     "sourcePath": "12-Fundamentals_of_AI_Agents_w_RAG_and_LangChain/Module-1-RAG_Framework/3-RAG_with_Hugging_Face.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "12-fundamentals-of-ai-agents-w-rag-and-lang-chain/module-1-rag-framework/rag-with-pytorch",
@@ -3132,9 +3132,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-rag-framework",
     "sourcePath": "12-Fundamentals_of_AI_Agents_w_RAG_and_LangChain/Module-1-RAG_Framework/4-RAG_with_Pytorch.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "12-fundamentals-of-ai-agents-w-rag-and-lang-chain/module-2-prompt-engineering-and-lang-chain/lang-chain-intro",
@@ -3143,9 +3143,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-prompt-engineering-and-lang-chain",
     "sourcePath": "12-Fundamentals_of_AI_Agents_w_RAG_and_LangChain/Module-2-Prompt_Engineering_and_LangChain/01-LangChain_Intro.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "12-fundamentals-of-ai-agents-w-rag-and-lang-chain/module-2-prompt-engineering-and-lang-chain/prompt-engineering-and-in-context-learning",
@@ -3154,9 +3154,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-prompt-engineering-and-lang-chain",
     "sourcePath": "12-Fundamentals_of_AI_Agents_w_RAG_and_LangChain/Module-2-Prompt_Engineering_and_LangChain/02-Prompt_Engineering_and_In-Context_Learning.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "12-fundamentals-of-ai-agents-w-rag-and-lang-chain/module-2-prompt-engineering-and-lang-chain/advanced-methods-of-prompt-engineering",
@@ -3165,9 +3165,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-prompt-engineering-and-lang-chain",
     "sourcePath": "12-Fundamentals_of_AI_Agents_w_RAG_and_LangChain/Module-2-Prompt_Engineering_and_LangChain/03-Advanced_Methods_of_Prompt_Engineering.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "12-fundamentals-of-ai-agents-w-rag-and-lang-chain/module-2-prompt-engineering-and-lang-chain/icl-and-prompt-templates-for-advanced-ai",
@@ -3176,9 +3176,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-prompt-engineering-and-lang-chain",
     "sourcePath": "12-Fundamentals_of_AI_Agents_w_RAG_and_LangChain/Module-2-Prompt_Engineering_and_LangChain/04-ICL_and_Prompt Templates_for_Advanced_AI.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "12-fundamentals-of-ai-agents-w-rag-and-lang-chain/module-2-prompt-engineering-and-lang-chain/lang-chain-core-concepts",
@@ -3187,9 +3187,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-prompt-engineering-and-lang-chain",
     "sourcePath": "12-Fundamentals_of_AI_Agents_w_RAG_and_LangChain/Module-2-Prompt_Engineering_and_LangChain/05-LangChain_Core_Concepts.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "12-fundamentals-of-ai-agents-w-rag-and-lang-chain/module-2-prompt-engineering-and-lang-chain/lang-chain-docs-for-rag-applicaitons",
@@ -3198,9 +3198,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-prompt-engineering-and-lang-chain",
     "sourcePath": "12-Fundamentals_of_AI_Agents_w_RAG_and_LangChain/Module-2-Prompt_Engineering_and_LangChain/06-LangChain_Docs_for_RAG_Applicaitons.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "12-fundamentals-of-ai-agents-w-rag-and-lang-chain/module-2-prompt-engineering-and-lang-chain/lang-chain-and-agents-for-applications",
@@ -3209,9 +3209,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-prompt-engineering-and-lang-chain",
     "sourcePath": "12-Fundamentals_of_AI_Agents_w_RAG_and_LangChain/Module-2-Prompt_Engineering_and_LangChain/07-LangChain_and_Agents_for_Applications.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "12-fundamentals-of-ai-agents-w-rag-and-lang-chain/module-2-prompt-engineering-and-lang-chain/lang-chain-lab",
@@ -3220,9 +3220,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-prompt-engineering-and-lang-chain",
     "sourcePath": "12-Fundamentals_of_AI_Agents_w_RAG_and_LangChain/Module-2-Prompt_Engineering_and_LangChain/08-LangChain_Lab.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "12-fundamentals-of-ai-agents-w-rag-and-lang-chain/module-2-prompt-engineering-and-lang-chain/summarize-private-docs-w-rag-lang-chain-and-llms",
@@ -3231,9 +3231,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-prompt-engineering-and-lang-chain",
     "sourcePath": "12-Fundamentals_of_AI_Agents_w_RAG_and_LangChain/Module-2-Prompt_Engineering_and_LangChain/09-Summarize_Private_Docs_w_RAG_LangChain_and_LLMs.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "13-gen-ai-applications-with-rag-and-lang-chain-project/module-1-document-loader-using-lang-chain/load-documents-from-diff-sources",
@@ -3242,9 +3242,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-document-loader-using-lang-chain",
     "sourcePath": "13-Gen_AI_Applications_with_RAG_and_LangChain_Project/Module-1-Document_Loader_Using_LangChain/1-Load_Documents_from_Diff_Sources.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "13-gen-ai-applications-with-rag-and-lang-chain-project/module-1-document-loader-using-lang-chain/lang-chain-document-loader",
@@ -3253,9 +3253,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-document-loader-using-lang-chain",
     "sourcePath": "13-Gen_AI_Applications_with_RAG_and_LangChain_Project/Module-1-Document_Loader_Using_LangChain/2-LangChain_Document_Loader.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "13-gen-ai-applications-with-rag-and-lang-chain-project/module-1-document-loader-using-lang-chain/best-practices-for-loading-docs",
@@ -3264,9 +3264,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-document-loader-using-lang-chain",
     "sourcePath": "13-Gen_AI_Applications_with_RAG_and_LangChain_Project/Module-1-Document_Loader_Using_LangChain/3-Best_Practices_for_Loading_Docs.md",
     "sourceFormat": "md",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "13-gen-ai-applications-with-rag-and-lang-chain-project/module-1-document-loader-using-lang-chain/full-doc-retrieve",
@@ -3275,9 +3275,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-document-loader-using-lang-chain",
     "sourcePath": "13-Gen_AI_Applications_with_RAG_and_LangChain_Project/Module-1-Document_Loader_Using_LangChain/4-Full_Doc_Retrieve.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "13-gen-ai-applications-with-rag-and-lang-chain-project/module-1-document-loader-using-lang-chain/text-splitting-strategies-for-optimal-processing",
@@ -3286,9 +3286,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-document-loader-using-lang-chain",
     "sourcePath": "13-Gen_AI_Applications_with_RAG_and_LangChain_Project/Module-1-Document_Loader_Using_LangChain/5-Text_Splitting_Strategies_for_Optimal_Processing.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "13-gen-ai-applications-with-rag-and-lang-chain-project/module-1-document-loader-using-lang-chain/lang-chain-text-splitter",
@@ -3297,9 +3297,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-1-document-loader-using-lang-chain",
     "sourcePath": "13-Gen_AI_Applications_with_RAG_and_LangChain_Project/Module-1-Document_Loader_Using_LangChain/6-LangChain_Text_Splitter.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "13-gen-ai-applications-with-rag-and-lang-chain-project/module-2-rag-using-lang-chain/embed-docs-using-watson-x-model",
@@ -3308,9 +3308,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-rag-using-lang-chain",
     "sourcePath": "13-Gen_AI_Applications_with_RAG_and_LangChain_Project/Module-2-RAG_Using_LangChain/1-Embed_Docs_Using_WatsonX_Model.md",
     "sourceFormat": "md",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "13-gen-ai-applications-with-rag-and-lang-chain-project/module-2-rag-using-lang-chain/lab-embed-docs-w-watson-x-embedding",
@@ -3319,9 +3319,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-rag-using-lang-chain",
     "sourcePath": "13-Gen_AI_Applications_with_RAG_and_LangChain_Project/Module-2-RAG_Using_LangChain/2-Lab_Embed_Docs_w_WatsonX_Embedding.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "13-gen-ai-applications-with-rag-and-lang-chain-project/module-2-rag-using-lang-chain/intro-to-vector-dbs-for-storing-embeddings",
@@ -3330,9 +3330,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-rag-using-lang-chain",
     "sourcePath": "13-Gen_AI_Applications_with_RAG_and_LangChain_Project/Module-2-RAG_Using_LangChain/3-Intro_to_Vector_DBs_for_Storing_Embeddings.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "13-gen-ai-applications-with-rag-and-lang-chain-project/module-2-rag-using-lang-chain/lang-chain-vector-store",
@@ -3341,9 +3341,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-rag-using-lang-chain",
     "sourcePath": "13-Gen_AI_Applications_with_RAG_and_LangChain_Project/Module-2-RAG_Using_LangChain/4-LangChain_Vector_Store.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "13-gen-ai-applications-with-rag-and-lang-chain-project/module-2-rag-using-lang-chain/advanced-retrievers-in-lang-chain",
@@ -3352,9 +3352,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-rag-using-lang-chain",
     "sourcePath": "13-Gen_AI_Applications_with_RAG_and_LangChain_Project/Module-2-RAG_Using_LangChain/5-Advanced_Retrievers_in_LangChain.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "13-gen-ai-applications-with-rag-and-lang-chain-project/module-2-rag-using-lang-chain/lang-chain-retriever",
@@ -3363,9 +3363,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-rag-using-lang-chain",
     "sourcePath": "13-Gen_AI_Applications_with_RAG_and_LangChain_Project/Module-2-RAG_Using_LangChain/6-LangChain_Retriever.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "13-gen-ai-applications-with-rag-and-lang-chain-project/module-2-rag-using-lang-chain/fine-tuning-vs-rag",
@@ -3374,9 +3374,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-2-rag-using-lang-chain",
     "sourcePath": "13-Gen_AI_Applications_with_RAG_and_LangChain_Project/Module-2-RAG_Using_LangChain/7-Fine_Tuning_vs_RAG.md",
     "sourceFormat": "md",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   },
   {
     "id": "13-gen-ai-applications-with-rag-and-lang-chain-project/module-3-qa-bot/getting-started-w-gradio",
@@ -3385,9 +3385,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-3-qa-bot",
     "sourcePath": "13-Gen_AI_Applications_with_RAG_and_LangChain_Project/Module-3-QA_Bot/1-Getting_Started_w_Gradio.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "LessonStudioLab",
+    "specifier": "./lessons/remaining-course-spec.js",
+    "status": "ready"
   }
 ];
 
@@ -3395,9 +3395,9 @@ export const SIMULATION_COUNTS = Object.freeze({
   courses: 13,
   modules: 47,
   lessons: 308,
-  ready: 108,
-  planned: 200,
-  engines: 45
+  ready: 308,
+  planned: 0,
+  engines: 46
 });
 
 const simulationBySource = new Map(

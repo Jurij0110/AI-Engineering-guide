@@ -24,6 +24,8 @@ import { evaluateQLearning } from "../assets/js/simulations/engines/q-learning-l
 import { evaluateDeepQNetwork } from "../assets/js/simulations/engines/deep-q-network-lab.js";
 import { evaluateFruitClassification } from "../assets/js/simulations/engines/fruit-classification-lab.js";
 import { evaluateWasteClassification } from "../assets/js/simulations/engines/waste-classification-lab.js";
+import { evaluateLessonStudio } from "../assets/js/simulations/engines/lesson-studio-lab.js";
+import createRemainingLessonSpec from "../assets/js/simulations/lessons/remaining-course-spec.js";
 
 const simulatorBase = new URL("../assets/js/simulations/", import.meta.url);
 
@@ -735,15 +737,34 @@ test("Course 03 Module 7 engines dispatch bubbling change event on preset click,
   }
 });
 
-test("exact-path manifest maps 108 ready and 200 planned lessons", () => {
+test("Lesson Studio generates a source-matched, reachable simulation for every remaining lesson", () => {
+  const generated = SIMULATION_CATALOG.filter((entry) => entry.engine === "LessonStudioLab");
+  assert.equal(generated.length, 200);
+  assert.equal(new Set(generated.map((entry) => `${entry.courseId}/${entry.moduleId}`)).size, 29);
+
+  for (const entry of generated) {
+    const spec = createRemainingLessonSpec(entry);
+    const validation = validateLessonSpec(spec);
+    assert.deepEqual(validation.errors, [], entry.sourcePath);
+    assert.equal(spec.id, entry.id);
+    assert.equal(spec.sourcePath, entry.sourcePath);
+    assert.equal(spec.engine, "LessonStudioLab");
+
+    const baseline = Object.fromEntries(spec.controls.map((control) => [control.id, control.default]));
+    assert.equal(evaluateLessonStudio(baseline, spec.challenge.success).challengeComplete, false, entry.sourcePath);
+    assert.equal(evaluateLessonStudio(spec.challenge.success, spec.challenge.success).challengeComplete, true, entry.sourcePath);
+  }
+});
+
+test("exact-path manifest maps all 308 lessons to ready simulations", () => {
   assert.equal(SIMULATION_CATALOG.length, 308);
   const actualReady = SIMULATION_CATALOG.filter((entry) => entry.status === "ready").length;
   const actualPlanned = SIMULATION_CATALOG.filter((entry) => entry.status === "planned").length;
-  assert.equal(actualReady, 108);
-  assert.equal(actualPlanned, 200);
-  assert.equal(SIMULATION_COUNTS.ready, 108);
-  assert.equal(SIMULATION_COUNTS.planned, 200);
-  assert.equal(SIMULATION_COUNTS.engines, 45);
+  assert.equal(actualReady, 308);
+  assert.equal(actualPlanned, 0);
+  assert.equal(SIMULATION_COUNTS.ready, 308);
+  assert.equal(SIMULATION_COUNTS.planned, 0);
+  assert.equal(SIMULATION_COUNTS.engines, 46);
   assert.equal(SIMULATION_COUNTS.ready, actualReady, "SIMULATION_COUNTS.ready must match actual filtered catalog count");
   assert.equal(SIMULATION_COUNTS.planned, actualPlanned, "SIMULATION_COUNTS.planned must match actual filtered catalog count");
   assert.equal(SIMULATION_COUNTS.engines, engineLoaders.size, "SIMULATION_COUNTS.engines must match registered loader size");
@@ -767,7 +788,7 @@ test("exact-path manifest maps 108 ready and 200 planned lessons", () => {
 });
 
 test("every ready spec matches its source and loads a compliant engine", async () => {
-  assert.equal(engineLoaders.size, 45);
+  assert.equal(engineLoaders.size, 46);
   for (const entry of SIMULATION_CATALOG) {
     if (entry.status === "planned") {
       assert.equal(entry.specifier, null);
@@ -775,7 +796,8 @@ test("every ready spec matches its source and loads a compliant engine", async (
     }
 
     assert.match(entry.specifier, /^\.\/lessons\/[a-z0-9-]+\.js$/);
-    const spec = (await import(new URL(entry.specifier, simulatorBase))).default;
+    const specExport = (await import(new URL(entry.specifier, simulatorBase))).default;
+    const spec = typeof specExport === "function" ? specExport(entry) : specExport;
     const validation = validateLessonSpec(spec);
     assert.deepEqual(validation.errors, [], entry.sourcePath);
     for (const field of ["id", "courseId", "moduleId", "sourcePath", "sourceFormat", "engine"]) {

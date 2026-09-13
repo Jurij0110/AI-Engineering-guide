@@ -27,17 +27,13 @@ class SimulationIntegrationTestCase(unittest.TestCase):
         planned = [entry for entry in entries if entry["status"] == "planned"]
 
         self.assertEqual(len(entries), 308)
-        self.assertEqual(len(ready), 108)
-        self.assertEqual(len(planned), 200)
+        self.assertEqual(len(ready), 308)
+        self.assertEqual(len(planned), 0)
         self.assertEqual(len({(entry["libraryId"], entry["sourcePath"]) for entry in entries}), 308)
         self.assertEqual({entry["libraryId"] for entry in entries}, {"ibm-ai-engineering"})
         self.assertEqual(
             {entry["courseId"] for entry in ready},
-            {
-                "01-machine-learning-with-python",
-                "02-intro-to-deep-learning-and-neural-networks-with-keras",
-                "03-deep-learning-with-keras-and-tensorflow",
-            },
+            {entry["courseId"] for entry in entries},
         )
 
     def test_every_ready_mapping_resolves_to_a_spec_and_engine(self):
@@ -48,7 +44,7 @@ class SimulationIntegrationTestCase(unittest.TestCase):
             loader_source,
         ))
 
-        self.assertEqual(len(loaders), 45)
+        self.assertEqual(len(loaders), 46)
         for entry in entries:
             if entry["status"] != "ready":
                 self.assertIsNone(entry["specifier"])
@@ -60,8 +56,13 @@ class SimulationIntegrationTestCase(unittest.TestCase):
                 self.assertTrue((SIM_ROOT / "engines" / loaders[entry["engine"]]).is_file())
 
                 spec_source = spec_path.read_text(encoding="utf-8")
-                for key in ("id", "courseId", "moduleId", "sourcePath", "sourceFormat", "engine"):
-                    self.assertIn(f'{key}: {json.dumps(entry[key])}', spec_source)
+                if entry["engine"] == "LessonStudioLab":
+                    self.assertEqual(entry["specifier"], "./lessons/remaining-course-spec.js")
+                    self.assertIn("createRemainingLessonSpec", spec_source)
+                    self.assertIn(f'"{entry["courseId"]}/{entry["moduleId"]}"', spec_source)
+                else:
+                    for key in ("id", "courseId", "moduleId", "sourcePath", "sourceFormat", "engine"):
+                        self.assertIn(f'{key}: {json.dumps(entry[key])}', spec_source)
 
     def test_host_uses_lazy_runtime_and_shared_firebase_completion(self):
         app = (ROOT / "assets" / "js" / "course-library" / "app.js").read_text(encoding="utf-8")

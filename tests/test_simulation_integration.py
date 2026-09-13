@@ -56,10 +56,12 @@ class SimulationIntegrationTestCase(unittest.TestCase):
                 self.assertTrue((SIM_ROOT / "engines" / loaders[entry["engine"]]).is_file())
 
                 spec_source = spec_path.read_text(encoding="utf-8")
-                if entry["engine"] == "LessonStudioLab":
-                    self.assertEqual(entry["specifier"], "./lessons/remaining-course-spec.js")
-                    self.assertIn("createRemainingLessonSpec", spec_source)
-                    self.assertIn(f'"{entry["courseId"]}/{entry["moduleId"]}"', spec_source)
+                if entry["engine"] == "DedicatedLessonLab":
+                    self.assertEqual(entry["specifier"], "./lessons/dedicated-course-spec.js")
+                    self.assertIn("createDedicatedCourseSpec", spec_source)
+                    self.assertIn("FAMILY_TO_MODE", spec_source)
+                    blueprint_source = (SIM_ROOT / "lessons" / "dedicated-course-blueprints.js").read_text(encoding="utf-8")
+                    self.assertIn(entry["sourcePath"], blueprint_source)
                 else:
                     for key in ("id", "courseId", "moduleId", "sourcePath", "sourceFormat", "engine"):
                         self.assertIn(f'{key}: {json.dumps(entry[key])}', spec_source)

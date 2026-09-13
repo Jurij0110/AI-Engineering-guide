@@ -44,7 +44,7 @@ export const engineLoaders = new Map([
   ["DeepQNetworkLab", () => import("./engines/deep-q-network-lab.js")],
   ["FruitClassificationLab", () => import("./engines/fruit-classification-lab.js")],
   ["WasteClassificationLab", () => import("./engines/waste-classification-lab.js")],
-  ["LessonStudioLab", () => import("./engines/lesson-studio-lab.js")]
+  ["DedicatedLessonLab", () => import("./engines/dedicated-lesson-lab.js")]
 ]);
 
 export function registerEngineLoaders(registry) {

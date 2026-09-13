@@ -24,8 +24,9 @@ import { evaluateQLearning } from "../assets/js/simulations/engines/q-learning-l
 import { evaluateDeepQNetwork } from "../assets/js/simulations/engines/deep-q-network-lab.js";
 import { evaluateFruitClassification } from "../assets/js/simulations/engines/fruit-classification-lab.js";
 import { evaluateWasteClassification } from "../assets/js/simulations/engines/waste-classification-lab.js";
-import { evaluateLessonStudio } from "../assets/js/simulations/engines/lesson-studio-lab.js";
-import createRemainingLessonSpec from "../assets/js/simulations/lessons/remaining-course-spec.js";
+import { evaluateDedicatedLesson } from "../assets/js/simulations/engines/dedicated-lesson-lab.js";
+import createDedicatedCourseSpec, { getDedicatedCoverageReport } from "../assets/js/simulations/lessons/dedicated-course-spec.js";
+import { DEDICATED_LESSON_BLUEPRINTS, getDedicatedLessonBlueprint } from "../assets/js/simulations/lessons/dedicated-course-blueprints.js";
 
 const simulatorBase = new URL("../assets/js/simulations/", import.meta.url);
 
@@ -737,22 +738,58 @@ test("Course 03 Module 7 engines dispatch bubbling change event on preset click,
   }
 });
 
-test("Lesson Studio generates a source-matched, reachable simulation for every remaining lesson", () => {
-  const generated = SIMULATION_CATALOG.filter((entry) => entry.engine === "LessonStudioLab");
+test("Dedicated lesson blueprints generate a source-matched, reachable simulation for every Course 04-13 lesson", async () => {
+  const generated = SIMULATION_CATALOG.filter((entry) => entry.engine === "DedicatedLessonLab");
   assert.equal(generated.length, 200);
+  assert.equal(DEDICATED_LESSON_BLUEPRINTS.length, 200);
+  assert.equal(new Set(DEDICATED_LESSON_BLUEPRINTS.map((item) => item.sourcePath)).size, 200);
+  assert.deepEqual(getDedicatedCoverageReport(), { lessons: 200, families: 46, missingFamilies: [] });
   assert.equal(new Set(generated.map((entry) => `${entry.courseId}/${entry.moduleId}`)).size, 29);
+  assert.equal(new Set(generated.map((entry) => entry.sourcePath.split("/")[0])).size, 10);
+
+  const seenActivities = new Set();
+  const representativeByFamily = new Map();
 
   for (const entry of generated) {
-    const spec = createRemainingLessonSpec(entry);
+    const blueprint = getDedicatedLessonBlueprint(entry.sourcePath);
+    assert.ok(blueprint, entry.sourcePath);
+    assert.equal(blueprint.sourceFormat, entry.sourceFormat, entry.sourcePath);
+    const spec = createDedicatedCourseSpec(entry);
     const validation = validateLessonSpec(spec);
     assert.deepEqual(validation.errors, [], entry.sourcePath);
     assert.equal(spec.id, entry.id);
     assert.equal(spec.sourcePath, entry.sourcePath);
-    assert.equal(spec.engine, "LessonStudioLab");
+    assert.equal(spec.engine, "DedicatedLessonLab");
+    assert.equal(spec.title, blueprint.title, entry.sourcePath);
+    assert.equal(spec.activity.id, `dedicated-${blueprint.number}`, entry.sourcePath);
+    assert.equal(spec.activity.family, blueprint.family, entry.sourcePath);
+    assert.equal(spec.activity.simulation, blueprint.simulation, entry.sourcePath);
+    assert.equal(spec.activity.interaction, blueprint.interaction, entry.sourcePath);
+    assert.equal(spec.activity.successCriterion, blueprint.successCriterion, entry.sourcePath);
+    assert.ok(spec.controls.some((control) => control.id === "lesson_evidence"), entry.sourcePath);
+    assert.equal(spec.controls.some((control) => control.id === "notebook_checkpoint"), entry.sourceFormat === "ipynb", entry.sourcePath);
+    assert.ok(spec.challenge.prompt.includes(blueprint.successCriterion), entry.sourcePath);
+    seenActivities.add(spec.activity.id);
+    if (!representativeByFamily.has(blueprint.family)) representativeByFamily.set(blueprint.family, spec);
 
     const baseline = Object.fromEntries(spec.controls.map((control) => [control.id, control.default]));
-    assert.equal(evaluateLessonStudio(baseline, spec.challenge.success).challengeComplete, false, entry.sourcePath);
-    assert.equal(evaluateLessonStudio(spec.challenge.success, spec.challenge.success).challengeComplete, true, entry.sourcePath);
+    assert.equal(evaluateDedicatedLesson(baseline, spec.challenge.success).challengeComplete, false, entry.sourcePath);
+    assert.equal(evaluateDedicatedLesson(spec.challenge.success, spec.challenge.success).challengeComplete, true, entry.sourcePath);
+  }
+
+  assert.equal(seenActivities.size, 200);
+  assert.equal(representativeByFamily.size, 46);
+
+  const loader = engineLoaders.get("DedicatedLessonLab");
+  for (const [family, spec] of representativeByFamily) {
+    const engine = (await loader()).createEngine();
+    const container = { innerHTML: "", querySelectorAll: () => [], dispatchEvent: () => {} };
+    engine.mount(container, spec);
+    assert.ok(container.innerHTML.includes(`data-lesson-activity="${spec.activity.id}"`), family);
+    assert.ok(container.innerHTML.includes(spec.activity.family), family);
+    assert.ok(container.innerHTML.includes("data-simulation-disclosure"), family);
+    assert.ok(engine.getAccessibleSummary().includes(spec.title), family);
+    engine.destroy();
   }
 });
 

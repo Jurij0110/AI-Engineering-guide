@@ -77,11 +77,9 @@ export function createSimulationIntegration({ dialog, isComplete, setComplete })
 
   function updateSummary() {
     cancelAnimationFrame(summaryFrame);
-    summaryFrame = requestAnimationFrame(() => {
-      const text = activeEngine?.getAccessibleSummary?.() || "Adjust the controls to explore this simulation.";
-      summary.textContent = text;
-      liveSummary.textContent = text;
-    });
+    const text = activeEngine?.getAccessibleSummary?.() || "Adjust the controls to explore this simulation.";
+    summary.textContent = text;
+    liveSummary.textContent = text;
   }
 
   function showLoading() {

@@ -33,7 +33,17 @@ export const engineLoaders = new Map([
   ["TransformerArchitectureLab", () => import("./engines/transformer-architecture-lab.js")],
   ["SequentialModelingLab", () => import("./engines/sequential-modeling-lab.js")],
   ["DiffusionLab", () => import("./engines/diffusion-lab.js")],
-  ["GANLab", () => import("./engines/gan-lab.js")]
+  ["GANLab", () => import("./engines/gan-lab.js")],
+  ["AdvancedKerasLab", () => import("./engines/advanced-keras-lab.js")],
+  ["CustomTrainingLoopLab", () => import("./engines/custom-training-loop-lab.js")],
+  ["KerasTunerLab", () => import("./engines/keras-tuner-lab.js")],
+  ["ModelOptimizationLab", () => import("./engines/model-optimization-lab.js")],
+  ["DistillationOptimizationLab", () => import("./engines/distillation-optimization-lab.js")],
+  ["RLOverviewLab", () => import("./engines/rl-overview-lab.js")],
+  ["QLearningLab", () => import("./engines/q-learning-lab.js")],
+  ["DeepQNetworkLab", () => import("./engines/deep-q-network-lab.js")],
+  ["FruitClassificationLab", () => import("./engines/fruit-classification-lab.js")],
+  ["WasteClassificationLab", () => import("./engines/waste-classification-lab.js")]
 ]);
 
 export function registerEngineLoaders(registry) {

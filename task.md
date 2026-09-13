@@ -17,26 +17,23 @@ Nguồn sự thật cho coverage: `assets/data/simulation-catalog.mjs`, tra cứ
 | Course | 13 |
 | Module học có bài trong catalog | 47 |
 | Bài trong simulation catalog | 308 |
-| Bài `ready` / có specifier | 94 |
-| Bài `planned` / chưa có simulation | 214 |
-| Module đã phủ hết bài catalog | 15 |
-| Module chưa có simulation nào | 32 |
+| Bài `ready` / có specifier | 108 |
+| Bài `planned` / chưa có simulation | 200 |
+| Module đã phủ hết bài catalog | 18 |
+| Module chưa có simulation nào | 29 |
 | Module phủ một phần | 0 |
-| Engine đã đăng ký | 35 |
+| Engine đã đăng ký | 45 |
 
-15 module đã có đủ mapping/spec/engine, gồm Course 01 Module 1–6 (43 bài), Course 02 Module 1–5 (22 bài), và Course 03 Module 1–4 (29 bài). Course 03 Module 5–7 và toàn bộ Course 04–13 còn `planned`. Đã kiểm thử tự động qua Python suite (8/8) và Node suite (13/13); **chưa QA tương tác trên trình duyệt cho toàn bộ 94 bài**, nên chưa coi là hoàn tất theo định nghĩa ở mục 1. Chưa test ghi tiến độ vào Firebase để tránh thay đổi tài khoản thật. Khi QA, mở tab mới hoặc hard reload để tránh cache JavaScript cũ.
+18 module đã có đủ mapping/spec/engine, gồm Course 01 Module 1–6 (43 bài), Course 02 Module 1–5 (22 bài), và Course 03 Module 1–7 (43 bài). Toàn bộ Course 04–13 còn `planned`; hiện chưa cần triển khai cho đến khi người học đến các phần đó. Đã kiểm thử tự động qua Python suite (8/8) và Node suite (29/29). Course 03 Module 5–7 (14 bài mới) đã được QA tương tác trên Chrome: mở đúng bài, đổi preset, Reset và đồng bộ phần kết quả; không đánh dấu hoàn thành bài học. Chưa kiểm thử ghi tiến độ vào Firebase để tránh thay đổi tài khoản thật. Con số 18/47 là **coverage simulation trong catalog**, không phải tiến độ học của tài khoản hay xác nhận đã QA thủ công từng bài trong toàn bộ 108 bài.
 
 Website có thể hiển thị **362 indexed files** và các module `Certificates`; đó là toàn bộ file repository, không phải 308 bài trong simulation catalog. Không dùng thống kê indexed files để suy ra số simulation còn thiếu.
 
 ## 3. Danh sách chính xác các module chưa làm
 
-Trong bảng, `M` là số module trong course; `ready/total` chỉ nói về coverage simulation, **không phải** tiến độ học. ID course/module và từng `sourcePath` chính xác nằm trong manifest; tiêu đề ở đây chỉ để đọc nhanh. Tất cả 32 dòng dưới đây hiện có `0` bài `ready`.
+Trong bảng, `M` là số module trong course; `ready/total` chỉ nói về coverage simulation, **không phải** tiến độ học. ID course/module và từng `sourcePath` chính xác nằm trong manifest; tiêu đề ở đây chỉ để đọc nhanh. Tất cả 29 dòng dưới đây hiện có `0` bài `ready`.
 
 | Course | Module chưa làm | Ready / tổng bài catalog |
 | --- | --- | ---: |
-| 03 Deep Learning with Keras and TensorFlow | M5 — Advanced Keras Techniques | 0/7 |
-| 03 | M6 — Intro to Reinforcement Learning with Keras | 0/5 |
-| 03 | M7 — Final Project | 0/2 |
 | 04 Introduction to Neural Networks and PyTorch | M1 — Tensor and Datasets | 0/12 |
 | 04 | M2 — Linear Regression | 0/9 |
 | 04 | M3 — Linear Regression Pytorch Way | 0/8 |
@@ -67,7 +64,7 @@ Trong bảng, `M` là số module trong course; `ready/total` chỉ nói về co
 | 13 | M2 — RAG Using LangChain | 0/7 |
 | 13 | M3 — QA Bot | 0/1 |
 
-Tổng theo course còn thiếu: **01: 0; 02: 0; 03: 14; 04: 46; 05: 40; 06: 10; 07: 11; 08: 18; 09: 20; 10: 13; 11: 15; 12: 13; 13: 14 = 214 bài**. Course 05 bắt đầu từ M2 theo **ID nguồn**; không tự đổi thành M1. Course 04 có tên thư mục nguồn khác thường với hậu tố `.txt`; giữ nguyên `sourcePath` trong manifest. Một số filename nguồn có lỗi chính tả (ví dụ `Mulitple`); không tự “sửa đẹp” đường dẫn.
+Tổng theo course còn thiếu: **01: 0; 02: 0; 03: 0; 04: 46; 05: 40; 06: 10; 07: 11; 08: 18; 09: 20; 10: 13; 11: 15; 12: 13; 13: 14 = 200 bài**. Course 05 bắt đầu từ M2 theo **ID nguồn**; không tự đổi thành M1. Course 04 có tên thư mục nguồn khác thường với hậu tố `.txt`; giữ nguyên `sourcePath` trong manifest. Một số filename nguồn có lỗi chính tả (ví dụ `Mulitple`); không tự “sửa đẹp” đường dẫn.
 
 ## 4. Bản đồ dự án cho agent mới
 
@@ -147,3 +144,6 @@ Mục tiêu cuối: **308/308 bài `ready`, 47/47 module phủ hết**, cùng ki
 Mục tiêu cuối: **308/308 bài `ready`, 47/47 module phủ hết**, cùng kiểm thử thực tế; snapshot hiện tại đạt **79/308 bài, 13/47 module**.
 Mục tiêu cuối: **308/308 bài `ready`, 47/47 module phủ hết**, cùng kiểm thử thực tế; snapshot hiện tại đạt **86/308 bài, 14/47 module**.
 Mục tiêu cuối: **308/308 bài `ready`, 47/47 module phủ hết**, cùng kiểm thử thực tế; snapshot hiện tại đạt **94/308 bài, 15/47 module**.
+Mục tiêu cuối: **308/308 bài `ready`, 47/47 module phủ hết**, cùng kiểm thử thực tế; snapshot hiện tại đạt **101/308 bài, 16/47 module** (đã qua tự động 20/20 Node và 8/8 Python; QA tương tác trình duyệt cho 7 bài Course 03 M5 đã hoàn tất).
+Mục tiêu cuối: **308/308 bài `ready`, 47/47 module phủ hết**, cùng kiểm thử thực tế; mốc trước đạt **106/308 bài, 17/47 module** (25/25 Node và 8/8 Python).
+Mục tiêu cuối: **308/308 bài `ready`, 47/47 module phủ hết**, cùng kiểm thử thực tế; snapshot hiện tại đạt **108/308 bài, 18/47 module** (Course 03 có 43/43 bài; 29/29 Node và 8/8 Python; Course 03 M5–M7 đã QA tương tác trên Chrome). Tạm dừng triển khai các module còn lại theo yêu cầu người học.

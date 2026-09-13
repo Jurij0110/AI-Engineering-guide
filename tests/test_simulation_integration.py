@@ -27,8 +27,8 @@ class SimulationIntegrationTestCase(unittest.TestCase):
         planned = [entry for entry in entries if entry["status"] == "planned"]
 
         self.assertEqual(len(entries), 308)
-        self.assertEqual(len(ready), 94)
-        self.assertEqual(len(planned), 214)
+        self.assertEqual(len(ready), 108)
+        self.assertEqual(len(planned), 200)
         self.assertEqual(len({(entry["libraryId"], entry["sourcePath"]) for entry in entries}), 308)
         self.assertEqual({entry["libraryId"] for entry in entries}, {"ibm-ai-engineering"})
         self.assertEqual(
@@ -48,7 +48,7 @@ class SimulationIntegrationTestCase(unittest.TestCase):
             loader_source,
         ))
 
-        self.assertEqual(len(loaders), 35)
+        self.assertEqual(len(loaders), 45)
         for entry in entries:
             if entry["status"] != "ready":
                 self.assertIsNone(entry["specifier"])

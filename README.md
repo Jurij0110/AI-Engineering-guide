@@ -76,7 +76,7 @@ No Python server or SQLite database is used in production.
 
 ## Course simulations
 
-The IBM course library displays **Simulation** beside the 94 source lessons that have a validated simulator spec. The other 214 catalogued lessons are marked **Simulation planned**; unrelated repository files have no simulation action. A simulation opens inside the existing course UI, loads its spec and engine on demand, and links back to the original GitHub lesson. It does not run notebook code or require a simulator server.
+The IBM course library displays **Simulation** beside the 108 source lessons that have a validated simulator spec. The other 200 catalogued lessons are marked **Simulation planned**; unrelated repository files have no simulation action. A simulation opens inside the existing course UI, loads its spec and engine on demand, and links back to the original GitHub lesson. It does not run notebook code or require a simulator server.
 
 Simulation controls and Reset do not change progress. Only the explicit **Mark lesson complete** button calls the existing Firebase-backed progress store, using the same `file.path` key as the library checkbox. Close the dialog with Escape or either Close button. If an engine fails to load, the dialog offers Retry without affecting the course index.
 

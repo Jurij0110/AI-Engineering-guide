@@ -1042,9 +1042,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-5-advanced-keras-techniques",
     "sourcePath": "03-Deep_Learning_with_Keras_and_Tensorflow/Module-5-Advanced_Keras_Techniques/1-Advanced_Keras_Techniques.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "AdvancedKerasLab",
+    "specifier": "./lessons/advanced-keras-techniques.js",
+    "status": "ready"
   },
   {
     "id": "03-deep-learning-with-keras-and-tensorflow/module-5-advanced-keras-techniques/custom-training-loops-in-keras",
@@ -1053,9 +1053,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-5-advanced-keras-techniques",
     "sourcePath": "03-Deep_Learning_with_Keras_and_Tensorflow/Module-5-Advanced_Keras_Techniques/2-Custom_Training_Loops_in_Keras.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "CustomTrainingLoopLab",
+    "specifier": "./lessons/custom-training-loops-in-keras.js",
+    "status": "ready"
   },
   {
     "id": "03-deep-learning-with-keras-and-tensorflow/module-5-advanced-keras-techniques/custom-training-loops-lab",
@@ -1064,9 +1064,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-5-advanced-keras-techniques",
     "sourcePath": "03-Deep_Learning_with_Keras_and_Tensorflow/Module-5-Advanced_Keras_Techniques/3-Custom_Training_Loops_Lab.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "CustomTrainingLoopLab",
+    "specifier": "./lessons/custom-training-loops-lab.js",
+    "status": "ready"
   },
   {
     "id": "03-deep-learning-with-keras-and-tensorflow/module-5-advanced-keras-techniques/hyperparameter-tuning-with-keras-tuner",
@@ -1075,9 +1075,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-5-advanced-keras-techniques",
     "sourcePath": "03-Deep_Learning_with_Keras_and_Tensorflow/Module-5-Advanced_Keras_Techniques/4-Hyperparameter_Tuning_with_Keras_Tuner.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "KerasTunerLab",
+    "specifier": "./lessons/hyperparameter-tuning-with-keras-tuner.js",
+    "status": "ready"
   },
   {
     "id": "03-deep-learning-with-keras-and-tensorflow/module-5-advanced-keras-techniques/hyperparameter-tuning-with-keras-tuner-lab",
@@ -1086,9 +1086,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-5-advanced-keras-techniques",
     "sourcePath": "03-Deep_Learning_with_Keras_and_Tensorflow/Module-5-Advanced_Keras_Techniques/6-Hyperparameter_Tuning_with_Keras_Tuner_Lab.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "KerasTunerLab",
+    "specifier": "./lessons/hyperparameter-tuning-with-keras-tuner-lab.js",
+    "status": "ready"
   },
   {
     "id": "03-deep-learning-with-keras-and-tensorflow/module-5-advanced-keras-techniques/model-optimization",
@@ -1097,9 +1097,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-5-advanced-keras-techniques",
     "sourcePath": "03-Deep_Learning_with_Keras_and_Tensorflow/Module-5-Advanced_Keras_Techniques/7-Model_Optimization.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "ModelOptimizationLab",
+    "specifier": "./lessons/model-optimization.js",
+    "status": "ready"
   },
   {
     "id": "03-deep-learning-with-keras-and-tensorflow/module-5-advanced-keras-techniques/tensorflow-for-model-optimization",
@@ -1108,9 +1108,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-5-advanced-keras-techniques",
     "sourcePath": "03-Deep_Learning_with_Keras_and_Tensorflow/Module-5-Advanced_Keras_Techniques/8-Tensorflow_for_Model_Optimization.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "DistillationOptimizationLab",
+    "specifier": "./lessons/tensorflow-for-model-optimization.js",
+    "status": "ready"
   },
   {
     "id": "03-deep-learning-with-keras-and-tensorflow/module-6-intro-to-reinforcement-learning-with-keras/reinforcement-learning-overview",
@@ -1119,9 +1119,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-6-intro-to-reinforcement-learning-with-keras",
     "sourcePath": "03-Deep_Learning_with_Keras_and_Tensorflow/Module-6-Intro_to_Reinforcement_Learning_with_Keras/1-Reinforcement_Learning_Overview.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "RLOverviewLab",
+    "specifier": "./lessons/reinforcement-learning-overview.js",
+    "status": "ready"
   },
   {
     "id": "03-deep-learning-with-keras-and-tensorflow/module-6-intro-to-reinforcement-learning-with-keras/q-learning-in-keras",
@@ -1130,9 +1130,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-6-intro-to-reinforcement-learning-with-keras",
     "sourcePath": "03-Deep_Learning_with_Keras_and_Tensorflow/Module-6-Intro_to_Reinforcement_Learning_with_Keras/2-Q_Learning_in_Keras.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "QLearningLab",
+    "specifier": "./lessons/q-learning-in-keras.js",
+    "status": "ready"
   },
   {
     "id": "03-deep-learning-with-keras-and-tensorflow/module-6-intro-to-reinforcement-learning-with-keras/implementing-q-learning-lab",
@@ -1141,9 +1141,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-6-intro-to-reinforcement-learning-with-keras",
     "sourcePath": "03-Deep_Learning_with_Keras_and_Tensorflow/Module-6-Intro_to_Reinforcement_Learning_with_Keras/3-Implementing_Q_Learning_Lab.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "QLearningLab",
+    "specifier": "./lessons/implementing-q-learning-lab.js",
+    "status": "ready"
   },
   {
     "id": "03-deep-learning-with-keras-and-tensorflow/module-6-intro-to-reinforcement-learning-with-keras/deep-q-networks-with-keras",
@@ -1152,9 +1152,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-6-intro-to-reinforcement-learning-with-keras",
     "sourcePath": "03-Deep_Learning_with_Keras_and_Tensorflow/Module-6-Intro_to_Reinforcement_Learning_with_Keras/4-Deep_Q_Networks_with_Keras.txt",
     "sourceFormat": "txt",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "DeepQNetworkLab",
+    "specifier": "./lessons/deep-q-networks-with-keras.js",
+    "status": "ready"
   },
   {
     "id": "03-deep-learning-with-keras-and-tensorflow/module-6-intro-to-reinforcement-learning-with-keras/deep-q-network-with-keras-lab",
@@ -1163,9 +1163,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-6-intro-to-reinforcement-learning-with-keras",
     "sourcePath": "03-Deep_Learning_with_Keras_and_Tensorflow/Module-6-Intro_to_Reinforcement_Learning_with_Keras/5-Deep_Q_Network_with_Keras_Lab.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "DeepQNetworkLab",
+    "specifier": "./lessons/deep-q-network-with-keras-lab.js",
+    "status": "ready"
   },
   {
     "id": "03-deep-learning-with-keras-and-tensorflow/module-7-final-project/practice-project-fruit-classification",
@@ -1174,9 +1174,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-7-final-project",
     "sourcePath": "03-Deep_Learning_with_Keras_and_Tensorflow/Module-7-Final_Project/1-Practice_Project_Fruit Classification.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "FruitClassificationLab",
+    "specifier": "./lessons/practice-project-fruit-classification.js",
+    "status": "ready"
   },
   {
     "id": "03-deep-learning-with-keras-and-tensorflow/module-7-final-project/final-project-classify-waste-products",
@@ -1185,9 +1185,9 @@ export const SIMULATION_CATALOG = [
     "moduleId": "module-7-final-project",
     "sourcePath": "03-Deep_Learning_with_Keras_and_Tensorflow/Module-7-Final_Project/2-Final_Project_Classify_Waste_Products.ipynb",
     "sourceFormat": "ipynb",
-    "engine": "Unimplemented",
-    "specifier": null,
-    "status": "planned"
+    "engine": "WasteClassificationLab",
+    "specifier": "./lessons/final-project-classify-waste-products.js",
+    "status": "ready"
   },
   {
     "id": "04-intro-to-neural-networks-and-pytorch/module-1-tensor-and-datasets/tensors-overview",
@@ -3395,9 +3395,9 @@ export const SIMULATION_COUNTS = Object.freeze({
   courses: 13,
   modules: 47,
   lessons: 308,
-  ready: 94,
-  planned: 214,
-  engines: 35
+  ready: 108,
+  planned: 200,
+  engines: 45
 });
 
 const simulationBySource = new Map(
